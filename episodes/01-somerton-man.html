@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Somerton Man — Source List — Precision and Instinct</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;0,800;0,900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14171a;
+    --text: #f2efe9;
+    --accent: #ec3013;
+    --navy: #1B2A3C;
+    --rust: #B8522C;
+    --divider: rgba(242,239,233,0.24);
+    --muted-55: rgba(242,239,233,0.55);
+    --muted-65: rgba(242,239,233,0.65);
+    --muted-70: rgba(242,239,233,0.70);
+    --muted-72: rgba(242,239,233,0.72);
+    --muted-78: rgba(242,239,233,0.78);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Archivo", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  a { color: inherit; text-decoration: none; }
+  /* — nav — */
+  .nav {
+    display: flex; align-items: center; gap: 24px;
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--divider);
+  }
+  .nav-brand {
+    font-weight: 900; font-size: 18px; letter-spacing: -0.18px;
+    margin-right: auto;
+  }
+  .nav-brand .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600; font-size: 19.8px;
+  }
+  .nav a { font-size: 14px; }
+  .nav a:hover, .nav a[aria-current="page"] { color: var(--accent); }
+  .nav .btn-primary {
+    background: var(--accent); color: var(--text);
+    font-weight: 800; font-size: 14px;
+    padding: 8px 14.4px; border-radius: 0;
+  }
+  /* — hero — */
+  .hero { position: relative; display: flex; height: 300px; }
+  .hero .navy { flex: 1; background: var(--navy); }
+  .hero .rust { flex: 1; background: var(--rust); }
+  .hero .split { width: 6px; background: #0e0e10; }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    padding: 24px 24px 0;
+  }
+  .hero-kicker {
+    display: flex; justify-content: space-between;
+    font-weight: 700; font-size: 11px; letter-spacing: 3.08px;
+    color: var(--muted-72); text-transform: uppercase;
+  }
+  .hero-title {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+  }
+  .hero-title .wordmark {
+    font-weight: 900; font-size: 46px; letter-spacing: -0.92px;
+    text-transform: uppercase;
+  }
+  .hero-title .wordmark .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600;
+  }
+  .hero-tagline {
+    font-weight: 700; font-size: 13px; letter-spacing: 4.42px;
+    color: var(--muted-78); text-transform: uppercase;
+    text-align: center; padding-bottom: 20px;
+  }
+  /* — main — */
+  main { max-width: 820px; margin: 0 auto; padding: 32px 16px 60px; }
+  .page-header { padding-bottom: 24px; border-bottom: 2px solid var(--divider); margin-bottom: 24px; }
+  .page-kicker { font-size: 13px; color: var(--muted-65); margin-bottom: 8px; }
+  .page-kicker .ep-badge {
+    display: inline-flex; align-items: center;
+    background: var(--navy); color: var(--text);
+    font-weight: 800; font-size: 11px; letter-spacing: 0.5px;
+    padding: 3px 10px; margin-right: 8px;
+  }
+  h1 { font-weight: 800; font-size: 42px; letter-spacing: -0.84px; margin: 0; }
+  .notice {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    background: #1e2226; border: 1px solid var(--divider);
+    padding: 12px 16px; margin-bottom: 24px;
+  }
+  .tag {
+    display: inline-flex; align-items: center; font-size: 11px; letter-spacing: 0.22px;
+    padding: 3px 10px;
+  }
+  .tag-outline { border: 1px solid var(--accent); color: var(--accent); }
+  .notice-text { font-size: 13px; color: var(--muted-70); }
+  .intro { font-size: 17px; margin-bottom: 16px; }
+  .intro strong { font-weight: 700; }
+  .legend { display: flex; flex-wrap: wrap; gap: 24px; padding: 16px 0 24px; font-size: 12px; color: var(--muted-65); }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+  .legend-item .tag { font-size: 11px; }
+  .tag-confirmed { border: 1px solid var(--text); color: var(--text); }
+  .tag-disputed { border: 1px solid var(--accent); color: var(--accent); }
+  .tag-single { background: var(--text); color: var(--bg); }
+  section { margin-bottom: 8px; }
+  .section-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-bottom: 12px; margin-bottom: 0;
+    border-bottom: 2px solid var(--divider);
+  }
+  .section-head h2 { font-weight: 800; font-size: 25px; margin: 0; }
+  .section-head .count { font-size: 13px; color: var(--muted-55); }
+  .src-row {
+    padding: 16px 12px; border: 1px solid var(--divider); border-top: none;
+  }
+  .src-row .tag { margin-bottom: 8px; }
+  .src-claim { font-size: 15px; margin-bottom: 6px; }
+  .src-cite { font-size: 12.5px; color: var(--muted-65); }
+  .src-cite a { color: var(--accent); }
+  .src-cite a:hover { text-decoration: underline; }
+  footer { padding-top: 24px; border-top: 2px solid var(--divider); margin-top: 32px; }
+  footer p { margin: 0 0 4px; }
+  footer .show-line { font-weight: 800; font-size: 15px; }
+  footer .link-line { font-size: 13px; color: var(--muted-55); }
+  footer .link-line a { color: var(--accent); }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <span class="nav-brand">PRECISION <span class="amp">&amp;</span> INSTINCT</span>
+  <a href="/episodes/">Episodes</a>
+  <a href="/episodes/01-somerton-man.html" aria-current="page">Sources</a>
+  <a href="https://precisionandinstinct.taplink.bio">Listen</a>
+  <a class="btn-primary" href="https://precisionandinstinct.taplink.bio">Where to listen →</a>
+</nav>
+<div class="hero">
+  <div class="navy"></div>
+  <div class="split"></div>
+  <div class="rust"></div>
+  <div class="hero-overlay">
+    <div class="hero-kicker">
+      <span>PRECISION AND INSTINCT</span>
+      <span>SOURCE LIST</span>
+    </div>
+    <div class="hero-title">
+      <div class="wordmark">PRECISION <span class="amp">&amp;</span> INSTINCT</div>
+    </div>
+    <div class="hero-tagline">DEBATE.&nbsp;&nbsp;NO&nbsp;VERDICT.</div>
+  </div>
+</div>
+<main>
+  <div class="page-header">
+    <div class="page-kicker"><span class="ep-badge">EPISODE 01</span>SOURCE LIST</div>
+    <h1>The Somerton Man</h1>
+  </div>
+  <div class="notice">
+    <span class="tag tag-outline">Open Case</span>
+    <span class="notice-text">The Somerton Man's identification as Carl Webb (announced July 2022, DNA analysis completed by SA Police in December 2023) is scientifically well-supported but has not yet been confirmed by a formal finding from the South Australia Coroner's Court. We'll update this page if that changes.</span>
+  </div>
+  <p class="intro">
+    This page lists the sources behind the claims made in this episode, tiered by how well-established each one is.
+    <strong>Confirmed</strong> facts come from court records, police reports, or multiple independent contemporaneous news sources.
+    <strong>Disputed</strong> items have conflicting accounts.
+    <strong>Single-source</strong> claims rest on one account with no corroboration — treat them accordingly.
+  </p>
+  <div class="legend">
+    <div class="legend-item"><span class="tag tag-confirmed">Confirmed</span> court &amp; multi-source</div>
+    <div class="legend-item"><span class="tag tag-disputed">Disputed</span> conflicting accounts</div>
+    <div class="legend-item"><span class="tag tag-single">Single source</span> uncorroborated</div>
+  </div>
+  <section>
+    <div class="section-head"><h2>Confirmed Facts</h2><span class="count">15 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">On the morning of December 1, 1948, John Lyons and companions found a man's body reclined against the seawall at Somerton Park beach, near Adelaide, as if asleep, with a half-smoked cigarette resting on his collar.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a> (citing contemporary Adelaide <em>The News</em> coverage, Dec. 1948)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The autopsy described a man of an estimated 40–45 years, about 5'11", with grey eyes and fair-to-reddish hair greying at the temples. He had unusually developed calves and hands showing no sign of manual labor, and distinctive wedge-shaped toes suggestive of pointed footwear or dance.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a> (autopsy record)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Every label had been removed from his clothing, and his shoes were unusually clean and freshly polished. No hat, wallet, or identification of any kind was found on him.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Toxicology testing at the time found no identifiable poison, but pathologist John Dwyer believed the death was unnatural, and the organ findings (a congested stomach, an enlarged spleen, and congestion in the brain and pharynx) were consistent with a fast-acting glycoside-type poison — later specifically theorized as digitalis or ouabain. The coroner could not determine whether any poison, if present, was self-administered or given by someone else.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a> (inquest record); 1994 review by Chief Justice John Harber Phillips</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">A brown suitcase checked into the Adelaide Railway Station cloakroom on November 30, 1948, was recovered on January 14, 1949. It contained clothing bearing the laundry name "T. Keane," a stenciling brush, a trouser pocket repaired with an uncommon orange waxed thread that matched a repair on the trousers the dead man was wearing, and tools including a screwdriver, sharpened scissors, and a shortened table knife. No person named T. Keane was ever matched to the case despite a nationwide search.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">A scrap of paper reading "Tamám Shud" (Persian for "ended" or "finished"), torn from the final page of a specific 1941 Whitcombe &amp; Tombs edition of the <em>Rubáiyát of Omar Khayyám</em>, was found sewn into a concealed pocket in the man's trousers. The matching book — missing exactly that page — was later handed to police by a man given the pseudonym "Ronald Francis," who said he'd found it discarded in his unlocked car near the beach around the time of the death.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The book's back cover bears faint pencilled indentations of five lines of capital letters — a code that has never been definitively deciphered — along with an unlisted phone number that police traced to nurse Jessica "Jo" Thomson, who lived roughly 400 meters from where the body was found.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Jessica Thomson independently confirmed to police that she'd owned a copy of the same Rubáiyát edition during WWII and had inscribed and given a copy to Australian Army lieutenant Alf Boxall in 1945. Boxall was found alive in Sydney in July 1949 with his own copy intact — including its final page — ruling him out as the dead man.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">A 1978 Australian Department of Defence cryptographic assessment (commissioned for an ABC documentary) concluded the code was too short to analyze definitively. A 2014 computational analysis by John Rehling found the letter pattern statistically consistent with English word-initial shorthand rather than an encrypted message, and concluded the underlying text likely can't be recovered from the surviving fragment.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a> (citing the 1978 ABC documentary and Rehling's 2014 analysis)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The unidentified man was buried in 1949 at West Terrace Cemetery in Adelaide, with the cost covered by a local bookmakers' association so he wouldn't be given an unmarked pauper's grave.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The body was exhumed on May 19, 2021 (Operation Persevere/Persist) for DNA testing, after South Australia's Attorney-General approved the exhumation in 2019 — a reversal of an earlier 2011 refusal on public-interest grounds.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a>; <a href="https://www.abc.net.au/news/2021-05-19/six-clues-that-have-failed-to-solve-the-somerton-man-mystery/100148922" target="_blank" rel="noopener">ABC News</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">On July 26, 2022, University of Adelaide professor Derek Abbott and forensic genetic genealogist Colleen Fitzpatrick publicly announced they'd identified the Somerton Man as Carl "Charles" Webb, an electrical/instrument engineer born November 16, 1905, in Footscray, Melbourne — based on DNA recovered from hair embedded in the 1949 plaster death mask and traced through GEDmatch to distant cousins in a family tree of roughly 4,000 people.</div>
+      <div class="src-cite">Source: <a href="https://www.cnn.com/2022/07/26/australia/australia-somerton-man-mystery-solved-claim-intl-hnk-dst" target="_blank" rel="noopener">CNN, July 26, 2022</a>; <a href="https://www.smithsonianmag.com/smart-news/have-scholars-finally-identified-the-mysterious-somerton-man-180980540/" target="_blank" rel="noopener">Smithsonian Magazine</a>; <a href="https://www.abc.net.au/news/2022-11-21/somerton-manfamily-photographs-revealed-/101643524" target="_blank" rel="noopener">ABC News</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">South Australia Police's official public response, issued the day after the announcement, stated that the DNA result had not yet been verified by police or forensic authorities and that identity confirmation would ultimately rest with the Coroner.</div>
+      <div class="src-cite">Source: <a href="https://www.smithsonianmag.com/smart-news/have-scholars-finally-identified-the-mysterious-somerton-man-180980540/" target="_blank" rel="noopener">Smithsonian Magazine</a> (citing SA Police statement); <a href="https://www.abc.net.au/news/2022-11-21/somerton-manfamily-photographs-revealed-/101643524" target="_blank" rel="noopener">ABC News, Nov. 2022</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Family and divorce records show Webb married Dorothy "Doff" Robertson in 1941. The marriage was troubled; Webb attempted suicide by ether overdose in March 1946, and Dorothy left him in September 1946, filing for divorce in June 1951 on grounds of desertion (granted in April 1952). His whereabouts after 1947 are undocumented until his presumed arrival in Adelaide in November 1948.</div>
+      <div class="src-cite">Source: <a href="https://www.abc.net.au/news/2022-11-21/somerton-manfamily-photographs-revealed-/101643524" target="_blank" rel="noopener">ABC News, Nov. 21, 2022</a> (citing family photographs and the 1951 divorce file)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">As of the most recent reporting located, South Australia Police confirmed in December 2023 that DNA analysis of the exhumed remains was complete — but no formal Coroner's finding on identity had been issued. The Webb identification remains the strongest-supported explanation but is not yet a legal or official determination.</div>
+      <div class="src-cite">Source: <a href="https://www.okcir.com/the-last-two-pieces-of-the-somerton-man-case-jigsaw/" target="_blank" rel="noopener">okcir.com, 2026</a>; <a href="https://clutchjustice.com/2026/07/10/rita-ruins-everything-somerton-man/" target="_blank" rel="noopener">clutchjustice.com, July 2026</a> — both lower-profile outlets rather than wire services; treat this specific status claim as the best available reporting pending confirmation from a primary SA Police/Coroner's Court statement.</div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Disputed / Theories</h2><span class="count">7 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Cause and manner of death.</strong> The 1949 inquest could not determine whether poisoning occurred, or if it did, whether it was self-inflicted or administered by someone else — suicide, homicide, and an undetected natural or accidental cause were all left open. A 1994 review by Chief Justice John Harber Phillips leaned toward digitalis poisoning as most consistent with the pathology, but that's an inference from decades-old organ findings, not a contemporaneous toxicological confirmation — no poison was ever actually detected in period testing.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a>; 1994 Phillips review</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Espionage theory.</strong> The death occurred amid Cold War tensions, shortly before ASIO's founding and amid a real crackdown on Soviet intelligence activity in Australia. Proponents cite the undeciphered code, the man's unidentifiable origin, possible interest in nearby defense facilities, and a 1949 statement from a police superintendent that he believed the man came from a Warsaw Pact country — along with a 2013 claim from Jessica Thomson's daughter that her mother said the dead man's identity was "known to a level higher than the police force." This theory rests on circumstance and one family member's secondhand recollection; it has no documentary confirmation from any intelligence service. The 2022 Webb identification, if it holds up officially, undercuts but doesn't definitively disprove it, since nothing in Webb's documented biography points to an intelligence background.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a> (espionage-theory section, citing Kate Thomson's 2013 <em>60 Minutes</em> interview)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>What Jessica Thomson actually knew.</strong> Police recorded in 1949 that Thomson denied knowing the dead man or why he'd have her number. Her daughter Kate's 2013 account directly contradicts this, claiming Jessica later admitted she'd lied. The two accounts can't be reconciled and neither can be independently verified — Jessica died in 2007.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a> (citing the 1949 police interview and the 2013 <em>60 Minutes</em> interview)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Robin Thomson's parentage and the Egan family connection.</strong> An anthropological analysis of ear shape and dental traits led researcher Derek Abbott to theorize that Jessica Thomson's son Robin may have been the biological child of Alf Boxall or the Somerton Man rather than her husband, with Robin's daughter Rachel potentially the Somerton Man's granddaughter. Subsequent DNA testing on Rachel reportedly showed a link to her presumed grandfather's side of the family instead, which complicates rather than confirms the theory — and it's effectively been superseded by the entirely separate 2022 Webb identification.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a> (DNA/exhumation section)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>How long the Rubáiyát sat in the finder's car.</strong> Sources disagree on whether the book had been in the car for "a week or two" before it was discovered, or was left there closer to the time of the death — which affects how long the dead man may have been in the area beforehand.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a> (citing conflicting newspaper vs. detective Gerry Feltus accounts)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>What the code means.</strong> There's no consensus on whether the five lines of capital letters on the book's back cover are a genuine cipher, word-initial shorthand notes (the leading modern hypothesis), a list of racehorses, or something else entirely. Both the 1978 government assessment and the 2014 statistical analysis concluded it likely can't be solved from the surviving fragment.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>The "H.C. Reynolds" seaman's card theory (2011).</strong> An Adelaide woman produced a WWI-era U.S. foreign seaman's ID card for an "H.C. Reynolds," which one anthropologist assessed as a strong facial and ear match. Extensive archival searches never turned up a matching service record, and some researchers argue the card actually belonged to a different, identifiable Horace Charles Reynolds known to have died in 1953 — which would rule the theory out entirely. Treated as a dead-end minority theory rather than a live contender following the 2022 identification.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Single-Source Claims</h2><span class="count">6 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">A man was reportedly seen on the beach steps looking down at the "sleeping" Somerton Man the evening before the body was discovered — this rests on one witness account.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">A 1959 account describes two men seen together the night before the death, one apparently carrying the other. It comes from a single detective's (Don O'Doherty) later report, with no contemporaneous corroboration.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">A hotel receptionist's account, given years after the fact, describes a guest checking out of the Strathmore Hotel on November 30, 1948, carrying a small case reportedly containing a "needle." No corroborating hotel records have been cited.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a> (citing receptionist Ina Harvey's account)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">In a 2013 television interview, Jessica Thomson's daughter Kate said her mother had admitted to lying to police and had known the dead man's identity "at a level higher than the police force," and speculated both may have been intelligence-linked. This rests entirely on Kate's own secondhand recollection of private conversations with her late mother — it isn't corroborated by any document, recording, or third party, and it directly contradicts Jessica's own 1949 police statement. We don't present this as established fact, even though it's the origin of the case's most dramatic espionage claim.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a> (citing Channel Nine <em>60 Minutes</em>, Nov. 2013)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">In January 2022, researcher Sophie Holsman proposed Austrian milliner Carl Josef Halban as the Somerton Man's identity. The nomination hasn't gained independent corroboration or wider acceptance, and predates the Webb identification.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Somerton_Man" target="_blank" rel="noopener">Wikipedia — Somerton Man</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Descriptions of Carl Webb as moody, solitary, and at times violent when facing "defeat" come from a single source: his ex-wife Dorothy's 1951 divorce petition. That's a legal filing written by one party to establish grounds for divorce (desertion), not an independently corroborated psychological or biographical assessment.</div>
+      <div class="src-cite">Source: <a href="https://www.abc.net.au/news/2022-11-21/somerton-manfamily-photographs-revealed-/101643524" target="_blank" rel="noopener">ABC News, Nov. 21, 2022</a> (citing the 1951 divorce file)</div>
+    </div>
+  </section>
+  <footer>
+    <p class="show-line">Precision &amp; Instinct with Simone Valdez and Eli Marchetti</p>
+    <p class="link-line"><a href="https://precisionandinstinct.taplink.bio">precisionandinstinct.taplink.bio</a> · Full episode list and where to listen</p>
+  </footer>
+</main>
+</body>
+</html>
