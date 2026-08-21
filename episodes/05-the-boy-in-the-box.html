@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Boy in the Box — Source List — Precision and Instinct</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;0,800;0,900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14171a;
+    --text: #f2efe9;
+    --accent: #ec3013;
+    --navy: #1B2A3C;
+    --rust: #B8522C;
+    --divider: rgba(242,239,233,0.24);
+    --muted-55: rgba(242,239,233,0.55);
+    --muted-65: rgba(242,239,233,0.65);
+    --muted-70: rgba(242,239,233,0.70);
+    --muted-72: rgba(242,239,233,0.72);
+    --muted-78: rgba(242,239,233,0.78);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Archivo", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  a { color: inherit; text-decoration: none; }
+  /* — nav — */
+  .nav {
+    display: flex; align-items: center; gap: 24px;
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--divider);
+  }
+  .nav-brand {
+    font-weight: 900; font-size: 18px; letter-spacing: -0.18px;
+    margin-right: auto;
+  }
+  .nav-brand .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600; font-size: 19.8px;
+  }
+  .nav a { font-size: 14px; }
+  .nav a:hover, .nav a[aria-current="page"] { color: var(--accent); }
+  .nav .btn-primary {
+    background: var(--accent); color: var(--text);
+    font-weight: 800; font-size: 14px;
+    padding: 8px 14.4px; border-radius: 0;
+  }
+  /* — hero — */
+  .hero { position: relative; display: flex; height: 300px; }
+  .hero .navy { flex: 1; background: var(--navy); }
+  .hero .rust { flex: 1; background: var(--rust); }
+  .hero .split { width: 6px; background: #0e0e10; }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    padding: 24px 24px 0;
+  }
+  .hero-kicker {
+    display: flex; justify-content: space-between;
+    font-weight: 700; font-size: 11px; letter-spacing: 3.08px;
+    color: var(--muted-72); text-transform: uppercase;
+  }
+  .hero-title {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+  }
+  .hero-title .wordmark {
+    font-weight: 900; font-size: 46px; letter-spacing: -0.92px;
+    text-transform: uppercase;
+  }
+  .hero-title .wordmark .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600;
+  }
+  .hero-tagline {
+    font-weight: 700; font-size: 13px; letter-spacing: 4.42px;
+    color: var(--muted-78); text-transform: uppercase;
+    text-align: center; padding-bottom: 20px;
+  }
+  /* — main — */
+  main { max-width: 820px; margin: 0 auto; padding: 32px 16px 60px; }
+  .page-header { padding-bottom: 24px; border-bottom: 2px solid var(--divider); margin-bottom: 24px; }
+  .page-kicker { font-size: 13px; color: var(--muted-65); margin-bottom: 8px; }
+  .page-kicker .ep-badge {
+    display: inline-flex; align-items: center;
+    background: var(--navy); color: var(--text);
+    font-weight: 800; font-size: 11px; letter-spacing: 0.5px;
+    padding: 3px 10px; margin-right: 8px;
+  }
+  h1 { font-weight: 800; font-size: 42px; letter-spacing: -0.84px; margin: 0; }
+  .notice {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    background: #1e2226; border: 1px solid var(--divider);
+    padding: 12px 16px; margin-bottom: 24px;
+  }
+  .tag {
+    display: inline-flex; align-items: center; font-size: 11px; letter-spacing: 0.22px;
+    padding: 3px 10px;
+  }
+  .tag-outline { border: 1px solid var(--accent); color: var(--accent); }
+  .notice-text { font-size: 13px; color: var(--muted-70); }
+  .intro { font-size: 17px; margin-bottom: 16px; }
+  .intro strong { font-weight: 700; }
+  .legend { display: flex; flex-wrap: wrap; gap: 24px; padding: 16px 0 24px; font-size: 12px; color: var(--muted-65); }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+  .legend-item .tag { font-size: 11px; }
+  .tag-confirmed { border: 1px solid var(--text); color: var(--text); }
+  .tag-disputed { border: 1px solid var(--accent); color: var(--accent); }
+  .tag-single { background: var(--text); color: var(--bg); }
+  section { margin-bottom: 8px; }
+  .section-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-bottom: 12px; margin-bottom: 0;
+    border-bottom: 2px solid var(--divider);
+  }
+  .section-head h2 { font-weight: 800; font-size: 25px; margin: 0; }
+  .section-head .count { font-size: 13px; color: var(--muted-55); }
+  .src-row {
+    padding: 16px 12px; border: 1px solid var(--divider); border-top: none;
+  }
+  .src-row .tag { margin-bottom: 8px; }
+  .src-claim { font-size: 15px; margin-bottom: 6px; }
+  .src-cite { font-size: 12.5px; color: var(--muted-65); }
+  .src-cite a { color: var(--accent); }
+  .src-cite a:hover { text-decoration: underline; }
+  footer { padding-top: 24px; border-top: 2px solid var(--divider); margin-top: 32px; }
+  footer p { margin: 0 0 4px; }
+  footer .show-line { font-weight: 800; font-size: 15px; }
+  footer .link-line { font-size: 13px; color: var(--muted-55); }
+  footer .link-line a { color: var(--accent); }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <span class="nav-brand">PRECISION <span class="amp">&amp;</span> INSTINCT</span>
+  <a href="/episodes/">Episodes</a>
+  <a href="/episodes/05-the-boy-in-the-box.html" aria-current="page">Sources</a>
+  <a href="https://precisionandinstinct.taplink.bio">Listen</a>
+  <a class="btn-primary" href="https://precisionandinstinct.taplink.bio">Where to listen →</a>
+</nav>
+<div class="hero">
+  <div class="navy"></div>
+  <div class="split"></div>
+  <div class="rust"></div>
+  <div class="hero-overlay">
+    <div class="hero-kicker">
+      <span>PRECISION AND INSTINCT</span>
+      <span>SOURCE LIST</span>
+    </div>
+    <div class="hero-title">
+      <div class="wordmark">PRECISION <span class="amp">&amp;</span> INSTINCT</div>
+    </div>
+    <div class="hero-tagline">DEBATE.&nbsp;&nbsp;NO&nbsp;VERDICT.</div>
+  </div>
+</div>
+<main>
+  <div class="page-header">
+    <div class="page-kicker"><span class="ep-badge">EPISODE 05</span>SOURCE LIST</div>
+    <h1>The Boy in the Box</h1>
+  </div>
+  <div class="notice">
+    <span class="tag tag-outline">Open Case</span>
+    <span class="notice-text">This is an open, unsolved child-homicide case. Police have said they have unnamed suspicions but no suspect has ever been publicly identified — we don't speculate about who that might be. Joseph's parents are deceased; he has living half-siblings who were, by most accounts, unaware of his existence, so we keep any details about them to what's already public record.</span>
+  </div>
+  <p class="intro">
+    This page lists the sources behind the claims made in this episode, tiered by how well-established each one is.
+    <strong>Confirmed</strong> facts come from court records, police reports, or multiple independent contemporaneous news sources.
+    <strong>Disputed</strong> items have conflicting accounts.
+    <strong>Single-source</strong> claims rest on one account with no corroboration — treat them accordingly.
+  </p>
+  <div class="legend">
+    <div class="legend-item"><span class="tag tag-confirmed">Confirmed</span> court &amp; multi-source</div>
+    <div class="legend-item"><span class="tag tag-disputed">Disputed</span> conflicting accounts</div>
+    <div class="legend-item"><span class="tag tag-single">Single source</span> uncorroborated</div>
+  </div>
+  <section>
+    <div class="section-head"><h2>Confirmed Facts</h2><span class="count">17 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">On February 25, 1957, 26-year-old college student Frederick Benonis reported discovering a boy's body in Philadelphia's Fox Chase neighborhood, in a cardboard box that had originally held a J.C. Penney bassinet. He had first seen the box two days earlier and delayed reporting it until hearing a radio report about a missing child.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Murder_of_Joseph_Augustus_Zarelli" target="_blank" rel="noopener">Wikipedia — Murder of Joseph Augustus Zarelli</a>; <a href="https://storiesoftheunsolved.com/2020/04/24/the-boy-in-the-box/" target="_blank" rel="noopener">Stories of the Unsolved</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The boy was estimated at 4–6 years old, naked and malnourished, with blunt-force trauma, recently cut hair and trimmed nails, and old scars indicating chronic prior abuse. He had no vaccination, school, or medical record on file anywhere.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Murder_of_Joseph_Augustus_Zarelli" target="_blank" rel="noopener">Wikipedia — Murder of Joseph Augustus Zarelli</a>; <a href="https://www.inquirer.com/news/philadelphia/boy-in-the-box-philadelphia-case-backstory-20221207.html" target="_blank" rel="noopener">The Inquirer</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Remington Bristow, an investigator with the Medical Examiner's office, pursued the case from 1960 until his death in 1993. A psychic tip led him to a foster home run by Arthur and Catherine Nicoletti, roughly 1.5 miles from the discovery site.</div>
+      <div class="src-cite">Source: <a href="https://www.phillymag.com/news/2003/11/01/boy-in-the-box-philadelphia/" target="_blank" rel="noopener">Philadelphia Magazine</a>; <a href="https://en.wikipedia.org/wiki/Murder_of_Joseph_Augustus_Zarelli" target="_blank" rel="noopener">Wikipedia — Murder of Joseph Augustus Zarelli</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">During a 1961 walkthrough of the Nicoletti home, Bristow found a bassinet matching the box in the basement, along with blankets cut to fit the home's metal cots.</div>
+      <div class="src-cite">Source: <a href="https://www.phillymag.com/news/2003/11/01/boy-in-the-box-philadelphia/" target="_blank" rel="noopener">Philadelphia Magazine</a>; <a href="https://www.tapatalk.com/groups/theboyinthebox/the-foster-family-t81.html" target="_blank" rel="noopener">"The Foster Family" case thread</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">When Bristow pressed Arthur Nicoletti to take a polygraph in the 1980s, Nicoletti declined. Nicoletti, a widower, had married his stepdaughter Anna Marie Nagle after his first wife's death.</div>
+      <div class="src-cite">Source: <a href="https://www.tapatalk.com/groups/theboyinthebox/the-foster-family-t81.html" target="_blank" rel="noopener">"The Foster Family" case thread</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In 1998, Philadelphia PD Lt. Tom Augustine, together with Vidocq Society members, formally re-interviewed the Nicoletti family and concluded they were not involved in the boy's death. That investigative interview — not DNA testing — is what cleared the family; the DNA work done around that time targeted the victim's own remains for identification, not a comparison to the Nicolettis.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Murder_of_Joseph_Augustus_Zarelli" target="_blank" rel="noopener">Wikipedia — Murder of Joseph Augustus Zarelli</a>; <a href="https://www.tapatalk.com/groups/theboyinthebox/the-foster-family-t81.html" target="_blank" rel="noopener">"The Foster Family" case thread</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">A 1998 exhumation attempted to pull mitochondrial DNA from a tooth but yielded insufficient material for identification; the body was reburied at Ivy Hill Cemetery, still unnamed.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Murder_of_Joseph_Augustus_Zarelli" target="_blank" rel="noopener">Wikipedia — Murder of Joseph Augustus Zarelli</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In 2002, a woman (most commonly identified in reporting as "Mary" or "M.") told a psychiatrist a secondhand account of a trafficked, beaten child she called "Jonathan." Investigators looked into it, but it was never substantiated — no corroborating evidence turned up at the claimed location, and neighbors didn't recall such a child.</div>
+      <div class="src-cite">Source: <a href="https://storiesoftheunsolved.com/2020/04/24/the-boy-in-the-box/" target="_blank" rel="noopener">Stories of the Unsolved</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">A second exhumation in 2019 recovered a fuller DNA sample, handed to forensic genealogist Colleen Fitzpatrick of Identifinders International. Fitzpatrick described the recovered DNA as "like confetti," and genealogist Misty Gillis built out a family tree from cousin matches — described as reconstructing it "like a big Sudoku puzzle" — using GEDmatch as part of the process.</div>
+      <div class="src-cite">Source: <a href="https://www.aetv.com/articles/how-authorities-identified-the-boy-in-the-box-after-65-years" target="_blank" rel="noopener">A&amp;E</a>; <a href="https://en.wikipedia.org/wiki/Murder_of_Joseph_Augustus_Zarelli" target="_blank" rel="noopener">Wikipedia — Murder of Joseph Augustus Zarelli</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Between November 30 and December 8, 2022, police announced and confirmed the boy's identity: Joseph Augustus Zarelli, born January 13, 1953, to Augustus John Zarelli and Mary Elizabeth ("Betsy") Abel. His parents never married each other and both later married others; both are deceased.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Murder_of_Joseph_Augustus_Zarelli" target="_blank" rel="noopener">Wikipedia — Murder of Joseph Augustus Zarelli</a>; <a href="https://www.upi.com/Top_News/US/2022/12/08/philadelphia-boy-in-box/1341670522834/" target="_blank" rel="noopener">UPI</a>; <a href="https://6abc.com/post/boy-in-the-box-identified-philadelphia-cold-case-watch-news-conference-live-name/12544392/" target="_blank" rel="noopener">6abc</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">At the identification announcement, Capt. Jason Smith said: "We have our suspicions as to who may be responsible. We're hoping to receive an avalanche of tips from this press conference, someone in their mid to late 70s or 80s who remembers that child."</div>
+      <div class="src-cite">Source: <a href="https://www.aetv.com/articles/how-authorities-identified-the-boy-in-the-box-after-65-years" target="_blank" rel="noopener">A&amp;E</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The case remains an open homicide investigation, with a $20,000 reward offered for information leading to an arrest and conviction.</div>
+      <div class="src-cite">Source: <a href="https://www.cbsnews.com/news/box-in-the-box-child-murder-victim-identified-joseph-augustus-zarelli-police-philadelphia/" target="_blank" rel="noopener">CBS News</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In July 1957, homicide detectives served as pallbearers at the boy's funeral and he was buried in a potter's field near Dunks Ferry in Northeast Philadelphia; the donated headstone read "Heavenly Father, Bless This Unknown Boy."</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Murder_of_Joseph_Augustus_Zarelli" target="_blank" rel="noopener">Wikipedia — Murder of Joseph Augustus Zarelli</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">A new headstone was dedicated at Ivy Hill Cemetery on January 13, 2023 — what would have been his 70th birthday — reading "America's Unknown Child," with his name added.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Murder_of_Joseph_Augustus_Zarelli" target="_blank" rel="noopener">Wikipedia — Murder of Joseph Augustus Zarelli</a>; <a href="https://cbsnews.com/philadelphia/news/boy-in-the-box-joseph-augustus-zarelli-gets-new-headstone" target="_blank" rel="noopener">CBS News Philadelphia</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In September 2024, eight more unidentified remains were exhumed from the same Northeast Philadelphia potter's field for the same DNA and genealogy process used to identify Joseph. None had been identified as of the most recent reporting found.</div>
+      <div class="src-cite">Source: <a href="https://www.inquirer.com/crime/potters-field-northeast-philadelphia-homicide-victims-20240924.html" target="_blank" rel="noopener">The Inquirer</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">On January 13, 2026 — Joseph's 73rd birthday — the Vidocq Society announced a nationwide initiative applying the same identification method to other unidentified child homicide victims. Vidocq's Bill Fleisher called the case "the longest investigated, unsolved homicide" in the city's history, and said: "He's a symbol of all the children that haven't been identified yet, and the idea that they can be identified if the right resources and efforts are put forth in investigating these America's unknown children."</div>
+      <div class="src-cite">Source: <a href="https://www.nbcphiladelphia.com/news/local/nationwide-victim-id-initiative-unveiled-on-73rd-birthday-of-boy-in-the-box/4332339/" target="_blank" rel="noopener">NBC10 Philadelphia</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Disputed / Theories</h2><span class="count">3 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Whether the boy's death is tied to the Nicoletti household specifically.</strong> Bristow's theory — that the boy was the son of Anna Marie Nagle, hidden or disposed of to conceal a pregnancy outside marriage — was never proven and was effectively set aside by the 1998 investigative interview. No source confirms this was resolved through DNA testing; the exhumations were for identifying the victim, not for testing a biological connection to the Nicoletti family.</div>
+      <div class="src-cite">Source: <a href="https://www.phillymag.com/news/2003/11/01/boy-in-the-box-philadelphia/" target="_blank" rel="noopener">Philadelphia Magazine</a>; <a href="https://en.wikipedia.org/wiki/Murder_of_Joseph_Augustus_Zarelli" target="_blank" rel="noopener">Wikipedia — Murder of Joseph Augustus Zarelli</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>The specific manner of death within Bristow's theory</strong> (a fall from a third-floor window, a collapse near a pond, caretakers panicking) is Bristow's own speculative reconstruction, not an established fact.</div>
+      <div class="src-cite">Source: <a href="https://www.phillymag.com/news/2003/11/01/boy-in-the-box-philadelphia/" target="_blank" rel="noopener">Philadelphia Magazine</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Identity of the killer.</strong> Unresolved. Police have said they have "suspicions," but no suspect has been publicly named as of the most recent reporting found.</div>
+      <div class="src-cite">Source: <a href="https://www.aetv.com/articles/how-authorities-identified-the-boy-in-the-box-after-65-years" target="_blank" rel="noopener">A&amp;E</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Single-Source Claims</h2><span class="count">5 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Anna Marie Nagle has been described in some retellings as "intellectually disabled" with "four children, three of them stillborn." We could not corroborate this specific characterization in any of the more detailed accounts of the case, including the two most thorough case threads available.</div>
+      <div class="src-cite">Source: uncorroborated in the sources reviewed for this page</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Bristow is often described as having worked the case unpaid for 36 years. That figure is arithmetically consistent with 1957–1993, but no source states it explicitly — treat it as a reasonable inference rather than a directly sourced fact.</div>
+      <div class="src-cite">Source: inferred from confirmed dates (1957 discovery, Bristow's 1993 death)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">The specific claim that the genealogical profile became usable in "spring 2021" isn't precisely sourced — the fullest account gives only a 2019–2022 window, and one source states the genealogists reached the identification internally in October 2021.</div>
+      <div class="src-cite">Source: <a href="https://www.aetv.com/articles/how-authorities-identified-the-boy-in-the-box-after-65-years" target="_blank" rel="noopener">A&amp;E</a> (range only); Wikipedia (October 2021, internal)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">The claim that Philadelphia's forensic lab is now applying this process to "dozens" of other unidentified-remains cases "going back 60 years" is directionally consistent with the September 2024 eight-body exhumation and the January 2026 nationwide initiative, but no source gives this specific case count or time span.</div>
+      <div class="src-cite">Source: directional support only — see the September 2024 and January 2026 entries above</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Investigators have been vague about which ancestry databases were used beyond describing them as "public, consumer-accessible" (GEDmatch is the only one named in sourcing). No source explicitly frames this vagueness as a deliberate non-disclosure.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Murder_of_Joseph_Augustus_Zarelli" target="_blank" rel="noopener">Wikipedia — Murder of Joseph Augustus Zarelli</a> (GEDmatch only)</div>
+    </div>
+  </section>
+  <footer>
+    <p class="show-line">Precision &amp; Instinct with Simone Valdez and Eli Marchetti</p>
+    <p class="link-line"><a href="https://precisionandinstinct.taplink.bio">precisionandinstinct.taplink.bio</a> · Full episode list and where to listen</p>
+  </footer>
+</main>
+</body>
+</html>
