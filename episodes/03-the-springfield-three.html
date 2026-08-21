@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Springfield Three — Source List — Precision and Instinct</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;0,800;0,900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14171a;
+    --text: #f2efe9;
+    --accent: #ec3013;
+    --navy: #1B2A3C;
+    --rust: #B8522C;
+    --divider: rgba(242,239,233,0.24);
+    --muted-55: rgba(242,239,233,0.55);
+    --muted-65: rgba(242,239,233,0.65);
+    --muted-70: rgba(242,239,233,0.70);
+    --muted-72: rgba(242,239,233,0.72);
+    --muted-78: rgba(242,239,233,0.78);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Archivo", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  a { color: inherit; text-decoration: none; }
+  /* — nav — */
+  .nav {
+    display: flex; align-items: center; gap: 24px;
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--divider);
+  }
+  .nav-brand {
+    font-weight: 900; font-size: 18px; letter-spacing: -0.18px;
+    margin-right: auto;
+  }
+  .nav-brand .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600; font-size: 19.8px;
+  }
+  .nav a { font-size: 14px; }
+  .nav a:hover, .nav a[aria-current="page"] { color: var(--accent); }
+  .nav .btn-primary {
+    background: var(--accent); color: var(--text);
+    font-weight: 800; font-size: 14px;
+    padding: 8px 14.4px; border-radius: 0;
+  }
+  /* — hero — */
+  .hero { position: relative; display: flex; height: 300px; }
+  .hero .navy { flex: 1; background: var(--navy); }
+  .hero .rust { flex: 1; background: var(--rust); }
+  .hero .split { width: 6px; background: #0e0e10; }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    padding: 24px 24px 0;
+  }
+  .hero-kicker {
+    display: flex; justify-content: space-between;
+    font-weight: 700; font-size: 11px; letter-spacing: 3.08px;
+    color: var(--muted-72); text-transform: uppercase;
+  }
+  .hero-title {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+  }
+  .hero-title .wordmark {
+    font-weight: 900; font-size: 46px; letter-spacing: -0.92px;
+    text-transform: uppercase;
+  }
+  .hero-title .wordmark .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600;
+  }
+  .hero-tagline {
+    font-weight: 700; font-size: 13px; letter-spacing: 4.42px;
+    color: var(--muted-78); text-transform: uppercase;
+    text-align: center; padding-bottom: 20px;
+  }
+  /* — main — */
+  main { max-width: 820px; margin: 0 auto; padding: 32px 16px 60px; }
+  .page-header { padding-bottom: 24px; border-bottom: 2px solid var(--divider); margin-bottom: 24px; }
+  .page-kicker { font-size: 13px; color: var(--muted-65); margin-bottom: 8px; }
+  .page-kicker .ep-badge {
+    display: inline-flex; align-items: center;
+    background: var(--navy); color: var(--text);
+    font-weight: 800; font-size: 11px; letter-spacing: 0.5px;
+    padding: 3px 10px; margin-right: 8px;
+  }
+  h1 { font-weight: 800; font-size: 42px; letter-spacing: -0.84px; margin: 0; }
+  .notice {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    background: #1e2226; border: 1px solid var(--divider);
+    padding: 12px 16px; margin-bottom: 24px;
+  }
+  .tag {
+    display: inline-flex; align-items: center; font-size: 11px; letter-spacing: 0.22px;
+    padding: 3px 10px;
+  }
+  .tag-outline { border: 1px solid var(--accent); color: var(--accent); }
+  .notice-text { font-size: 13px; color: var(--muted-70); }
+  .intro { font-size: 17px; margin-bottom: 16px; }
+  .intro strong { font-weight: 700; }
+  .legend { display: flex; flex-wrap: wrap; gap: 24px; padding: 16px 0 24px; font-size: 12px; color: var(--muted-65); }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+  .legend-item .tag { font-size: 11px; }
+  .tag-confirmed { border: 1px solid var(--text); color: var(--text); }
+  .tag-disputed { border: 1px solid var(--accent); color: var(--accent); }
+  .tag-single { background: var(--text); color: var(--bg); }
+  section { margin-bottom: 8px; }
+  .section-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-bottom: 12px; margin-bottom: 0;
+    border-bottom: 2px solid var(--divider);
+  }
+  .section-head h2 { font-weight: 800; font-size: 25px; margin: 0; }
+  .section-head .count { font-size: 13px; color: var(--muted-55); }
+  .src-row {
+    padding: 16px 12px; border: 1px solid var(--divider); border-top: none;
+  }
+  .src-row .tag { margin-bottom: 8px; }
+  .src-claim { font-size: 15px; margin-bottom: 6px; }
+  .src-cite { font-size: 12.5px; color: var(--muted-65); }
+  .src-cite a { color: var(--accent); }
+  .src-cite a:hover { text-decoration: underline; }
+  footer { padding-top: 24px; border-top: 2px solid var(--divider); margin-top: 32px; }
+  footer p { margin: 0 0 4px; }
+  footer .show-line { font-weight: 800; font-size: 15px; }
+  footer .link-line { font-size: 13px; color: var(--muted-55); }
+  footer .link-line a { color: var(--accent); }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <span class="nav-brand">PRECISION <span class="amp">&amp;</span> INSTINCT</span>
+  <a href="/episodes/">Episodes</a>
+  <a href="/episodes/03-the-springfield-three.html" aria-current="page">Sources</a>
+  <a href="https://precisionandinstinct.taplink.bio">Listen</a>
+  <a class="btn-primary" href="https://precisionandinstinct.taplink.bio">Where to listen →</a>
+</nav>
+<div class="hero">
+  <div class="navy"></div>
+  <div class="split"></div>
+  <div class="rust"></div>
+  <div class="hero-overlay">
+    <div class="hero-kicker">
+      <span>PRECISION AND INSTINCT</span>
+      <span>SOURCE LIST</span>
+    </div>
+    <div class="hero-title">
+      <div class="wordmark">PRECISION <span class="amp">&amp;</span> INSTINCT</div>
+    </div>
+    <div class="hero-tagline">DEBATE.&nbsp;&nbsp;NO&nbsp;VERDICT.</div>
+  </div>
+</div>
+<main>
+  <div class="page-header">
+    <div class="page-kicker"><span class="ep-badge">EPISODE 03</span>SOURCE LIST</div>
+    <h1>The Springfield Three</h1>
+  </div>
+  <div class="notice">
+    <span class="tag tag-outline">Content Note</span>
+    <span class="notice-text">This episode covers a real, still-unsolved disappearance with living family members still seeking answers. We approach it with the same care we'd want if it were someone we knew.</span>
+  </div>
+  <p class="intro">
+    This page lists the sources behind the claims made in this episode, tiered by how well-established each one is.
+    <strong>Confirmed</strong> facts come from court records, police reports, or multiple independent contemporaneous news sources.
+    <strong>Disputed</strong> items have conflicting accounts.
+    <strong>Single-source</strong> claims rest on one account with no corroboration — treat them accordingly.
+  </p>
+  <div class="legend">
+    <div class="legend-item"><span class="tag tag-confirmed">Confirmed</span> court &amp; multi-source</div>
+    <div class="legend-item"><span class="tag tag-disputed">Disputed</span> conflicting accounts</div>
+    <div class="legend-item"><span class="tag tag-single">Single source</span> uncorroborated</div>
+  </div>
+  <section>
+    <div class="section-head"><h2>Confirmed Facts</h2><span class="count">13 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">On June 6, 1992, Suzie Streeter (19) and Stacy McCall (18) graduated from Kickapoo High School in Springfield, Missouri, and spent the evening at parties before heading to the home of Suzie's mother, Sherrill Levitt (47). Around 11:15 PM, Levitt was on the phone with a friend discussing painting a chest of drawers — the last confirmed contact anyone had with her. By the next morning, all three women were gone; their cars were still in the driveway, and their purses, keys, jewelry, and other personal items had been left behind.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Springfield_Three" target="_blank" rel="noopener">Wikipedia — Springfield Three</a>; <a href="https://www.fbi.gov/wanted/vicap/missing-persons/the-springfield-three---springfield-missouri" target="_blank" rel="noopener">FBI VICAP</a>; <a href="https://www.ky3.com/2022/06/06/springfield-three-cold-sase-30-years-since-disappearance-suzie-streeter-sherill-levitt-stacy-mccall/" target="_blank" rel="noopener">KY3, "30 years since the disappearance"</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Stacy's mother, Janis McCall, was the first to suspect something was wrong when she couldn't reach her daughter for a routine check-in call. She drove to the Streeter house herself before police were involved.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Springfield_Three" target="_blank" rel="noopener">Wikipedia — Springfield Three</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">There was no sign of forced entry or a violent struggle inside the house. The front porch light was found broken — the glass shade shattered, with glass on the ground rather than simply a burnt-out bulb — but that glass was swept away by the friends who found it, before police could treat it as evidence.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Springfield_Three" target="_blank" rel="noopener">Wikipedia — Springfield Three</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">A message on Sherrill Levitt's answering machine was described by those who heard it as strange or unsettling enough to report to police — but it was accidentally erased before investigators could hear it, a common risk with 1990s answering machines.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Springfield_Three" target="_blank" rel="noopener">Wikipedia — Springfield Three</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Dustin Recla, an ex-boyfriend of Suzie's, broke into a Springfield mausoleum with two others and stole gold fillings from a skull months before the disappearance; Suzie was a potential witness against him in that case. He passed a polygraph and was not charged in connection with the disappearance.</div>
+      <div class="src-cite">Source: <a href="https://unresolved.me/springfieldthree03" target="_blank" rel="noopener">Unresolved, "The Springfield Three, Part Three"</a>; <a href="https://en.wikipedia.org/wiki/Springfield_Three" target="_blank" rel="noopener">Wikipedia — Springfield Three</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Suzie's older brother, Bartt Streeter, was investigated early on and cleared — his alibi (asleep on a sofa) was confirmed by his girlfriend and a neighbor, and he passed a police polygraph.</div>
+      <div class="src-cite">Source: <a href="https://confusingcases.wordpress.com/2021/07/04/the-springfield-three-suspects/" target="_blank" rel="noopener">"The Springfield Three Part Two: Suspects"</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Robert Craig Cox, a former U.S. Army Ranger, was convicted in 1988 of murdering 19-year-old Sharon Zellers near Walt Disney World in a 1978 case. The Florida Supreme Court unanimously overturned the conviction, finding the evidence created only "a suspicion," not proof beyond reasonable doubt, and Cox was released. He returned to his hometown of Springfield and was living there in June 1992. He had previously worked at the same car lot as Stacy McCall's father — a documented connection, not just geographic coincidence.</div>
+      <div class="src-cite">Source: <a href="https://unresolved.me/springfieldthree04" target="_blank" rel="noopener">Unresolved, "Springfield Three, Part Four"</a>; <a href="https://confusingcases.wordpress.com/2021/07/04/the-springfield-three-suspects/" target="_blank" rel="noopener">confusingcases.wordpress.com</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Cox was arrested again in 1995 for an armed robbery in Texas during which he held a gun on a 12-year-old girl, and was sentenced to 30 years. In a January 1996 prison interview, he told police and a reporter that he knew the women were dead and that their bodies would never be found. Police said at the time they could not eliminate him as a suspect.</div>
+      <div class="src-cite">Source: <a href="https://unresolved.me/springfieldthree04" target="_blank" rel="noopener">Unresolved, "Springfield Three, Part Four"</a>; <a href="https://www.ky3.com/content/news/The-Springfield-Three-A-look-back-at-the-cold-case-28-years-later-571085741.html" target="_blank" rel="noopener">KY3, "28 years later"</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">A backhoe excavation of Cassville-area farmland (reported around 2003) recovered a trace of blood and a fragment of a green vehicle. The blood was tested and came back inconclusive — not matched to any of the three women. Witnesses had separately reported seeing a green van near the Levitt home around the time of the disappearance.</div>
+      <div class="src-cite">Source: <a href="https://www.ky3.com/2022/06/06/springfield-three-cold-sase-30-years-since-disappearance-suzie-streeter-sherill-levitt-stacy-mccall/" target="_blank" rel="noopener">KY3, "30 years since the disappearance"</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In 2007, a private engineer's ground-penetrating radar scan under a Cox South Hospital parking garage reported three anomalies consistent with possible grave sites. Police investigated and declined to act, in part because the garage's own construction began in September 1993 — more than a year after the disappearance.</div>
+      <div class="src-cite">Source: <a href="https://www.ky3.com/2022/06/06/springfield-three-cold-sase-30-years-since-disappearance-suzie-streeter-sherill-levitt-stacy-mccall/" target="_blank" rel="noopener">KY3, "30 years since the disappearance"</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Sherrill Levitt and Suzie Streeter were declared legally dead in 1997, five years after they disappeared; Stacy McCall was declared dead in a separate family petition around the same time.</div>
+      <div class="src-cite">Source: <a href="https://charleyproject.org/case/stacy-kathleen-mccall" target="_blank" rel="noopener">The Charley Project — Stacy Kathleen McCall</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Steven Garrison, a convicted felon with ties to an outlaw motorcycle club, was arrested on a weapons charge in 1993 and began cooperating with police, claiming to have overheard someone confess involvement — a tip that led to a search of a rural property. He was separately convicted in 1995 of forcible rape and sodomy with a weapon and other charges stemming from an August 1993 assault, and received a 40-year sentence.</div>
+      <div class="src-cite">Source: <a href="https://unresolved.me/springfieldthree03" target="_blank" rel="noopener">Unresolved, "The Springfield Three, Part Three"</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Larry DeWayne Hall, a convicted serial predator who traveled the Midwest for historical reenactments and was later convicted of kidnapping in a different 1993 case, at one point told an FBI informant "The Springfield Three, we killed them" — and later recanted. He was known to drive a green van similar to the one witnesses reported near the Levitt home. A Civil War reenactment took place in Pleasant Hope, Missouri (near Springfield) the same weekend as the disappearance, though Hall's attendance at that specific event is unconfirmed.</div>
+      <div class="src-cite">Source: <a href="https://unresolved.me/springfieldthree04" target="_blank" rel="noopener">Unresolved, "Springfield Three, Part Four"</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Disputed / Theories</h2><span class="count">3 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Abduction vs. some other explanation.</strong> The case's central, unresolved question is whether the total absence of physical evidence — no blood, no signs of struggle, no confirmed remains, no confession that holds up — points toward a case that's genuinely unsolvable with the evidence available, or whether the porch light and the pattern of belongings left behind is itself strong circumstantial evidence of abduction. Every source reviewed treats this as a live, unresolved debate; none claims a settled explanation.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Springfield_Three" target="_blank" rel="noopener">Wikipedia — Springfield Three</a>; <a href="https://sgfcitizen.org/springfield-culture/missing-women-theories-and-investigations-into-the-springfield-three-cold-case/" target="_blank" rel="noopener">Springfield Daily Citizen</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Robert Craig Cox's credibility.</strong> Investigators have said they can't eliminate Cox as a suspect, but no source treats his prison statements as an actual confession. Multiple accounts — including his own prison writings, in which he reportedly referred to the case as one of several "games" he had "going at once" — suggest he may have been courting attention rather than disclosing real knowledge. This remains an open, unresolved credibility question rather than settled fact in either direction.</div>
+      <div class="src-cite">Source: <a href="https://unresolved.me/springfieldthree04" target="_blank" rel="noopener">Unresolved, "Springfield Three, Part Four"</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Larry DeWayne Hall's "confession."</strong> Hall's statement to an FBI informant was recanted almost immediately, consistent with a documented pattern of Hall making and retracting claims about many unsolved cases across multiple states. It should never be treated as more than a recanted claim.</div>
+      <div class="src-cite">Source: <a href="https://unresolved.me/springfieldthree04" target="_blank" rel="noopener">Unresolved, "Springfield Three, Part Four"</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Single-Source Claims</h2><span class="count">1 item</span></div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Cox's best-sourced direct quotes support that he claimed to know the women were dead and would never be found — but no source we found has him specifying "Springfield" as the burial location in his own words. Treat that specific detail as unverified; the safer framing is simply that he claimed to know they were dead and would never be found.</div>
+      <div class="src-cite">Source: <a href="https://unresolved.me/springfieldthree04" target="_blank" rel="noopener">Unresolved, "Springfield Three, Part Four"</a></div>
+    </div>
+  </section>
+  <footer>
+    <p class="show-line">Precision &amp; Instinct with Simone Valdez and Eli Marchetti</p>
+    <p class="link-line"><a href="https://precisionandinstinct.taplink.bio">precisionandinstinct.taplink.bio</a> · Full episode list and where to listen</p>
+  </footer>
+</main>
+</body>
+</html>
