@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pancho Villa: The Parral Ambush — Source List — Precision and Instinct</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;0,800;0,900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14171a;
+    --text: #f2efe9;
+    --accent: #ec3013;
+    --navy: #1B2A3C;
+    --rust: #B8522C;
+    --divider: rgba(242,239,233,0.24);
+    --muted-55: rgba(242,239,233,0.55);
+    --muted-65: rgba(242,239,233,0.65);
+    --muted-70: rgba(242,239,233,0.70);
+    --muted-72: rgba(242,239,233,0.72);
+    --muted-78: rgba(242,239,233,0.78);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Archivo", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  a { color: inherit; text-decoration: none; }
+  /* — nav — */
+  .nav {
+    display: flex; align-items: center; gap: 24px;
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--divider);
+  }
+  .nav-brand {
+    font-weight: 900; font-size: 18px; letter-spacing: -0.18px;
+    margin-right: auto;
+  }
+  .nav-brand .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600; font-size: 19.8px;
+  }
+  .nav a { font-size: 14px; }
+  .nav a:hover, .nav a[aria-current="page"] { color: var(--accent); }
+  .nav .btn-primary {
+    background: var(--accent); color: var(--text);
+    font-weight: 800; font-size: 14px;
+    padding: 8px 14.4px; border-radius: 0;
+  }
+  /* — hero — */
+  .hero { position: relative; display: flex; height: 300px; }
+  .hero .navy { flex: 1; background: var(--navy); }
+  .hero .rust { flex: 1; background: var(--rust); }
+  .hero .split { width: 6px; background: #0e0e10; }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    padding: 24px 24px 0;
+  }
+  .hero-kicker {
+    display: flex; justify-content: space-between;
+    font-weight: 700; font-size: 11px; letter-spacing: 3.08px;
+    color: var(--muted-72); text-transform: uppercase;
+  }
+  .hero-title {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+  }
+  .hero-title .wordmark {
+    font-weight: 900; font-size: 46px; letter-spacing: -0.92px;
+    text-transform: uppercase;
+  }
+  .hero-title .wordmark .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600;
+  }
+  .hero-tagline {
+    font-weight: 700; font-size: 13px; letter-spacing: 4.42px;
+    color: var(--muted-78); text-transform: uppercase;
+    text-align: center; padding-bottom: 20px;
+  }
+  /* — main — */
+  main { max-width: 820px; margin: 0 auto; padding: 32px 16px 60px; }
+  .page-header { padding-bottom: 24px; border-bottom: 2px solid var(--divider); margin-bottom: 24px; }
+  .page-kicker { font-size: 13px; color: var(--muted-65); margin-bottom: 8px; }
+  .page-kicker .ep-badge {
+    display: inline-flex; align-items: center;
+    background: var(--navy); color: var(--text);
+    font-weight: 800; font-size: 11px; letter-spacing: 0.5px;
+    padding: 3px 10px; margin-right: 8px;
+  }
+  h1 { font-weight: 800; font-size: 42px; letter-spacing: -0.84px; margin: 0; }
+  .notice {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    background: #1e2226; border: 1px solid var(--divider);
+    padding: 12px 16px; margin-bottom: 24px;
+  }
+  .tag {
+    display: inline-flex; align-items: center; font-size: 11px; letter-spacing: 0.22px;
+    padding: 3px 10px;
+  }
+  .tag-outline { border: 1px solid var(--accent); color: var(--accent); }
+  .notice-text { font-size: 13px; color: var(--muted-70); }
+  .intro { font-size: 17px; margin-bottom: 16px; }
+  .intro strong { font-weight: 700; }
+  .legend { display: flex; flex-wrap: wrap; gap: 24px; padding: 16px 0 24px; font-size: 12px; color: var(--muted-65); }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+  .legend-item .tag { font-size: 11px; }
+  .tag-confirmed { border: 1px solid var(--text); color: var(--text); }
+  .tag-disputed { border: 1px solid var(--accent); color: var(--accent); }
+  .tag-single { background: var(--text); color: var(--bg); }
+  section { margin-bottom: 8px; }
+  .section-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-bottom: 12px; margin-bottom: 0;
+    border-bottom: 2px solid var(--divider);
+  }
+  .section-head h2 { font-weight: 800; font-size: 25px; margin: 0; }
+  .section-head .count { font-size: 13px; color: var(--muted-55); }
+  .src-row {
+    padding: 16px 12px; border: 1px solid var(--divider); border-top: none;
+  }
+  .src-row .tag { margin-bottom: 8px; }
+  .src-claim { font-size: 15px; margin-bottom: 6px; }
+  .src-cite { font-size: 12.5px; color: var(--muted-65); }
+  .src-cite a { color: var(--accent); }
+  .src-cite a:hover { text-decoration: underline; }
+  footer { padding-top: 24px; border-top: 2px solid var(--divider); margin-top: 32px; }
+  footer p { margin: 0 0 4px; }
+  footer .show-line { font-weight: 800; font-size: 15px; }
+  footer .link-line { font-size: 13px; color: var(--muted-55); }
+  footer .link-line a { color: var(--accent); }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <span class="nav-brand">PRECISION <span class="amp">&amp;</span> INSTINCT</span>
+  <a href="/episodes/">Episodes</a>
+  <a href="/episodes/06-pancho-villa-the-parral-ambush.html" aria-current="page">Sources</a>
+  <a href="https://precisionandinstinct.taplink.bio">Listen</a>
+  <a class="btn-primary" href="https://precisionandinstinct.taplink.bio">Where to listen →</a>
+</nav>
+<div class="hero">
+  <div class="navy"></div>
+  <div class="split"></div>
+  <div class="rust"></div>
+  <div class="hero-overlay">
+    <div class="hero-kicker">
+      <span>PRECISION AND INSTINCT</span>
+      <span>SOURCE LIST</span>
+    </div>
+    <div class="hero-title">
+      <div class="wordmark">PRECISION <span class="amp">&amp;</span> INSTINCT</div>
+    </div>
+    <div class="hero-tagline">DEBATE.&nbsp;&nbsp;NO&nbsp;VERDICT.</div>
+  </div>
+</div>
+<main>
+  <div class="page-header">
+    <div class="page-kicker"><span class="ep-badge">EPISODE 06</span>SOURCE LIST</div>
+    <h1>Pancho Villa: The Parral Ambush</h1>
+  </div>
+  <div class="notice">
+    <span class="tag tag-outline">Historical Debate</span>
+    <span class="notice-text">This case names real historical figures — including Álvaro Obregón and Plutarco Elías Calles — in a century-old, still-debated conspiracy theory. We present that as an open historical dispute among historians, not a settled accusation.</span>
+  </div>
+  <p class="intro">
+    This page lists the sources behind the claims made in this episode, tiered by how well-established each one is.
+    <strong>Confirmed</strong> facts come from court records, police reports, or multiple independent contemporaneous news sources.
+    <strong>Disputed</strong> items have conflicting accounts.
+    <strong>Single-source</strong> claims rest on one account with no corroboration — treat them accordingly.
+  </p>
+  <div class="legend">
+    <div class="legend-item"><span class="tag tag-confirmed">Confirmed</span> court &amp; multi-source</div>
+    <div class="legend-item"><span class="tag tag-disputed">Disputed</span> conflicting accounts</div>
+    <div class="legend-item"><span class="tag tag-single">Single source</span> uncorroborated</div>
+  </div>
+  <section>
+    <div class="section-head"><h2>Confirmed Facts</h2><span class="count">15 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">On July 20, 1923, in Parral, Chihuahua, Pancho Villa was ambushed and killed while driving a black 1919 Dodge touring car; a street vendor's shout of "¡Viva Villa!" served as the signal to the gunmen. Villa was struck an estimated nine times and died at or near instantly; more than 40 rounds struck the vehicle. The exact number of gunmen is reported inconsistently — an official report by Colonel Lara cited "seven to nine" men, with other accounts describing a six- or seven-man squad.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Pancho_Villa" target="_blank" rel="noopener">Wikipedia — Pancho Villa</a>; <a href="https://frontierpartisans.com/4059/the-villa-hit/" target="_blank" rel="noopener">Frontier Partisans</a>; <a href="https://www.laits.utexas.edu/jaime/jrn/cwp/pvg/assassination.html" target="_blank" rel="noopener">UT Austin case study</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Four of Villa's five companions in the car were killed: bodyguards Rafael Madreno and Claro Huertado, secretary Daniel Tamayo, and driver/Colonel Miguel Trillo. The fifth, Ramón Contreras, survived — he was wounded, returned fire, killed at least one of the assassins, and escaped.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Pancho_Villa" target="_blank" rel="noopener">Wikipedia — Pancho Villa</a>; <a href="https://www.laits.utexas.edu/jaime/jrn/cwp/pvg/assassination.html" target="_blank" rel="noopener">UT Austin case study</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">On March 9, 1916, Villa's forces raided Columbus, New Mexico. American deaths are reported inconsistently across official records (8–11 soldiers, 7–8 civilians), with totals of 17 or 18 both commonly cited. U.S. recognition of Venustiano Carranza's government had just cut off Villa's access to American arms and support — the commonly cited context for the raid. The raid is widely described in popular historical treatments as one of very few armed foreign incursions onto continental U.S. soil between the War of 1812 and Pearl Harbor.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Battle_of_Columbus_(1916)" target="_blank" rel="noopener">Wikipedia — Battle of Columbus (1916)</a>; <a href="https://www.wearethemighty.com/articles/first-last-time-since-war-1812-enemy-forces-occupied-u-s-soil/" target="_blank" rel="noopener">We Are The Mighty</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">General John J. Pershing's Punitive Expedition, initially numbering roughly 10,000 troops, pursued Villa across northern Mexico from March 1916 to February 1917 without ever capturing him.</div>
+      <div class="src-cite">Source: <a href="https://www.history.army.mil/html/reference/army_flag/mexex.html" target="_blank" rel="noopener">U.S. Army Center of Military History</a>; <a href="https://www.nationalgeographic.com/history/article/pancho-villa-mexican-revolution" target="_blank" rel="noopener">National Geographic</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In 1914, the Mutual Film Company signed a contract with Villa for exclusive rights to film his troops in battle, with Villa receiving 20% of the revenue.</div>
+      <div class="src-cite">Source: <a href="https://www.smithsonianmag.com/history/uncovering-the-truth-behind-the-myth-of-pancho-villa-movie-star-110349996/" target="_blank" rel="noopener">Smithsonian Magazine</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In 1920, Álvaro Obregón — who had defeated Villa at the Battle of Celaya in April 1915 — led a revolt against Carranza. Carranza fled Mexico City and was killed in May 1920 while trying to escape.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Joaqu%C3%ADn_Amaro" target="_blank" rel="noopener">Wikipedia — Joaquín Amaro</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Villa's amnesty was negotiated by interim president Adolfo de la Huerta, not Obregón. Its terms: a 25,000-acre hacienda at Canutillo, Durango; a pension; and a government-sanctioned personal guard of 50 of his own former fighters. At Canutillo, Villa built a school and houses for the local community.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Pancho_Villa" target="_blank" rel="noopener">Wikipedia — Pancho Villa</a>; <a href="https://www.nationalgeographic.com/history/article/pancho-villa-mexican-revolution" target="_blank" rel="noopener">National Geographic</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Jesús Salas Barraza, a Chihuahua state legislator, publicly confessed to planning the assassination. His stated motives included a longstanding grudge — Villa had once pistol-whipped him in a dispute over a woman — a reported payment of 50,000 pesos (with 100,000 pesos said to have been collected from Villa's enemies), and a later public framing of the killing as ridding the world of "a monster."</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jes%C3%BAs_Salas_Barraza" target="_blank" rel="noopener">Wikipedia — Jesús Salas Barraza</a>; <a href="https://time.com/archive/6795539/mexico-the-man-who-killed-villa/" target="_blank" rel="noopener">Time (1923 archive)</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Salas Barraza was sentenced to 20 years but served only a fraction of it — sourcing converges on a release after roughly one to three months, not seven. The governor of Chihuahua commuted his sentence, and General Joaquín Amaro is separately credited as instrumental in securing his release.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jes%C3%BAs_Salas_Barraza" target="_blank" rel="noopener">Wikipedia — Jesús Salas Barraza</a>; <a href="https://www.truewestmagazine.com/article/pancho-villa-pt-iii-the-fall-of-pancho-villa/" target="_blank" rel="noopener">True West Magazine</a>; <a href="https://time.com/archive/6795539/mexico-the-man-who-killed-villa/" target="_blank" rel="noopener">Time (1923 archive)</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Joaquín Amaro fought against Villista guerrilla forces in the years following Celaya (documented 1915–1917 campaigns across several Mexican states) and was widely suspected as a planner or co-conspirator in the 1923 assassination. He was appointed Secretary of War by President Calles on December 1, 1924 — roughly a year and a half after Villa's death.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Joaqu%C3%ADn_Amaro" target="_blank" rel="noopener">Wikipedia — Joaquín Amaro</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Melitón Lozoya, the former owner of the Canutillo hacienda that had become Villa's property under his amnesty, is credited by historians as a co-conspirator who planned the ambush's details and recruited the men who carried it out. His documented motive was a debt dispute: Villa had accused him of embezzling funds from the hacienda and demanded repayment.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Melit%C3%B3n_Lozoya" target="_blank" rel="noopener">Wikipedia — Melitón Lozoya</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Five months after Villa's death, de la Huerta launched an open rebellion against the Obregón/Calles government.</div>
+      <div class="src-cite">Source: standard timeline of the 1923 De la Huerta rebellion</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">On February 5–6, 1926, Villa's grave was broken into and his skull removed. American Emil Holmdahl, along with accomplice Alberto Corral, was implicated and jailed at the time, then bailed out by rancher Ben Williams and helped across the border.</div>
+      <div class="src-cite">Source: <a href="https://mexiconewsdaily.com/culture/where-is-the-pancho-villa-skull/" target="_blank" rel="noopener">Mexico News Daily</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The century-old rumor that Villa's skull ended up with Yale's Skull and Bones society has never been confirmed. The society denies it, and a journalist who once claimed to have confirmed it later recanted.</div>
+      <div class="src-cite">Source: <a href="https://mexiconewsdaily.com/culture/where-is-the-pancho-villa-skull/" target="_blank" rel="noopener">Mexico News Daily</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Disputed / Theories</h2><span class="count">4 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Who ordered or sponsored the assassination.</strong> This is the case's central, genuinely unresolved debate. Historian Friedrich Katz's institutional-cover reading — that Obregón and Calles benefited from and protected Salas Barraza after the fact, evidenced by official correspondence — sits alongside readings that treat the personal grudges of Salas Barraza, Amaro, and Lozoya as sufficient motive on their own, with official cover arriving only after the fact rather than as a top-down order. No source resolves this definitively.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Pancho_Villa" target="_blank" rel="noopener">Wikipedia — Pancho Villa</a>; <a href="https://www.truewestmagazine.com/article/pancho-villa-pt-iii-the-fall-of-pancho-villa/" target="_blank" rel="noopener">True West Magazine</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Why Villa's escort was smaller the day of the ambush.</strong> Sourcing indicates that on the specific day he was killed, Villa had gone into town without most of his guards, taking only three bodyguards and two ranch employees — a description of that single day's travel arrangement, not necessarily proof that his standing 50-man guard had been formally and permanently reduced to a fixed complement of four over the preceding years. Both readings appear in the historical record.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Pancho_Villa" target="_blank" rel="noopener">Wikipedia — Pancho Villa</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Whether the Mutual Film Company arrangement involved restaging battle scenes for the cameras.</strong> The one surviving copy of the actual 1914 contract contains no clause about staged reenactments. Villa did wear a custom uniform and cooperate with retakes of non-combat material at the filmmakers' request, so there's a kernel of truth, but the popular "restaging skirmishes" story appears to be a myth conflated with Mutual's separate, later fictional film <em>The Life of General Villa</em>.</div>
+      <div class="src-cite">Source: <a href="https://www.smithsonianmag.com/history/uncovering-the-truth-behind-the-myth-of-pancho-villa-movie-star-110349996/" target="_blank" rel="noopener">Smithsonian Magazine</a>, citing historian Friedrich Katz's review of the surviving contract</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Whether the ambush was staged from Melitón Lozoya's house.</strong> Commonly repeated in popular accounts of the case, but not independently confirmed by the dedicated sourcing on Lozoya reviewed for this page.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Melit%C3%B3n_Lozoya" target="_blank" rel="noopener">Wikipedia — Melitón Lozoya</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Single-Source Claims</h2><span class="count">1 item</span></div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Villa is commonly described as having run cattle at Canutillo specifically, alongside building a school. We found this detail asserted across popular sources but not independently corroborated by name beyond the general "farming/ranch" characterization of his life there.</div>
+      <div class="src-cite">Source: general characterization only — see the Canutillo amnesty entry above for what is independently confirmed</div>
+    </div>
+  </section>
+  <footer>
+    <p class="show-line">Precision &amp; Instinct with Simone Valdez and Eli Marchetti</p>
+    <p class="link-line"><a href="https://precisionandinstinct.taplink.bio">precisionandinstinct.taplink.bio</a> · Full episode list and where to listen</p>
+  </footer>
+</main>
+</body>
+</html>
