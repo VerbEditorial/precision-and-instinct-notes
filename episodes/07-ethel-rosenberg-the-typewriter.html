@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ethel Rosenberg: The Typewriter — Source List — Precision and Instinct</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;0,800;0,900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14171a;
+    --text: #f2efe9;
+    --accent: #ec3013;
+    --navy: #1B2A3C;
+    --rust: #B8522C;
+    --divider: rgba(242,239,233,0.24);
+    --muted-55: rgba(242,239,233,0.55);
+    --muted-65: rgba(242,239,233,0.65);
+    --muted-70: rgba(242,239,233,0.70);
+    --muted-72: rgba(242,239,233,0.72);
+    --muted-78: rgba(242,239,233,0.78);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Archivo", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  a { color: inherit; text-decoration: none; }
+  /* — nav — */
+  .nav {
+    display: flex; align-items: center; gap: 24px;
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--divider);
+  }
+  .nav-brand {
+    font-weight: 900; font-size: 18px; letter-spacing: -0.18px;
+    margin-right: auto;
+  }
+  .nav-brand .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600; font-size: 19.8px;
+  }
+  .nav a { font-size: 14px; }
+  .nav a:hover, .nav a[aria-current="page"] { color: var(--accent); }
+  .nav .btn-primary {
+    background: var(--accent); color: var(--text);
+    font-weight: 800; font-size: 14px;
+    padding: 8px 14.4px; border-radius: 0;
+  }
+  /* — hero — */
+  .hero { position: relative; display: flex; height: 300px; }
+  .hero .navy { flex: 1; background: var(--navy); }
+  .hero .rust { flex: 1; background: var(--rust); }
+  .hero .split { width: 6px; background: #0e0e10; }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    padding: 24px 24px 0;
+  }
+  .hero-kicker {
+    display: flex; justify-content: space-between;
+    font-weight: 700; font-size: 11px; letter-spacing: 3.08px;
+    color: var(--muted-72); text-transform: uppercase;
+  }
+  .hero-title {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+  }
+  .hero-title .wordmark {
+    font-weight: 900; font-size: 46px; letter-spacing: -0.92px;
+    text-transform: uppercase;
+  }
+  .hero-title .wordmark .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600;
+  }
+  .hero-tagline {
+    font-weight: 700; font-size: 13px; letter-spacing: 4.42px;
+    color: var(--muted-78); text-transform: uppercase;
+    text-align: center; padding-bottom: 20px;
+  }
+  /* — main — */
+  main { max-width: 820px; margin: 0 auto; padding: 32px 16px 60px; }
+  .page-header { padding-bottom: 24px; border-bottom: 2px solid var(--divider); margin-bottom: 24px; }
+  .page-kicker { font-size: 13px; color: var(--muted-65); margin-bottom: 8px; }
+  .page-kicker .ep-badge {
+    display: inline-flex; align-items: center;
+    background: var(--navy); color: var(--text);
+    font-weight: 800; font-size: 11px; letter-spacing: 0.5px;
+    padding: 3px 10px; margin-right: 8px;
+  }
+  h1 { font-weight: 800; font-size: 42px; letter-spacing: -0.84px; margin: 0; }
+  .notice {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    background: #1e2226; border: 1px solid var(--divider);
+    padding: 12px 16px; margin-bottom: 24px;
+  }
+  .tag {
+    display: inline-flex; align-items: center; font-size: 11px; letter-spacing: 0.22px;
+    padding: 3px 10px;
+  }
+  .tag-outline { border: 1px solid var(--accent); color: var(--accent); }
+  .notice-text { font-size: 13px; color: var(--muted-70); }
+  .intro { font-size: 17px; margin-bottom: 16px; }
+  .intro strong { font-weight: 700; }
+  .legend { display: flex; flex-wrap: wrap; gap: 24px; padding: 16px 0 24px; font-size: 12px; color: var(--muted-65); }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+  .legend-item .tag { font-size: 11px; }
+  .tag-confirmed { border: 1px solid var(--text); color: var(--text); }
+  .tag-disputed { border: 1px solid var(--accent); color: var(--accent); }
+  .tag-single { background: var(--text); color: var(--bg); }
+  section { margin-bottom: 8px; }
+  .section-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-bottom: 12px; margin-bottom: 0;
+    border-bottom: 2px solid var(--divider);
+  }
+  .section-head h2 { font-weight: 800; font-size: 25px; margin: 0; }
+  .section-head .count { font-size: 13px; color: var(--muted-55); }
+  .src-row {
+    padding: 16px 12px; border: 1px solid var(--divider); border-top: none;
+  }
+  .src-row .tag { margin-bottom: 8px; }
+  .src-claim { font-size: 15px; margin-bottom: 6px; }
+  .src-cite { font-size: 12.5px; color: var(--muted-65); }
+  .src-cite a { color: var(--accent); }
+  .src-cite a:hover { text-decoration: underline; }
+  footer { padding-top: 24px; border-top: 2px solid var(--divider); margin-top: 32px; }
+  footer p { margin: 0 0 4px; }
+  footer .show-line { font-weight: 800; font-size: 15px; }
+  footer .link-line { font-size: 13px; color: var(--muted-55); }
+  footer .link-line a { color: var(--accent); }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <span class="nav-brand">PRECISION <span class="amp">&amp;</span> INSTINCT</span>
+  <a href="/episodes/">Episodes</a>
+  <a href="/episodes/07-ethel-rosenberg-the-typewriter.html" aria-current="page">Sources</a>
+  <a href="https://precisionandinstinct.taplink.bio">Listen</a>
+  <a class="btn-primary" href="https://precisionandinstinct.taplink.bio">Where to listen →</a>
+</nav>
+<div class="hero">
+  <div class="navy"></div>
+  <div class="split"></div>
+  <div class="rust"></div>
+  <div class="hero-overlay">
+    <div class="hero-kicker">
+      <span>PRECISION AND INSTINCT</span>
+      <span>SOURCE LIST</span>
+    </div>
+    <div class="hero-title">
+      <div class="wordmark">PRECISION <span class="amp">&amp;</span> INSTINCT</div>
+    </div>
+    <div class="hero-tagline">DEBATE.&nbsp;&nbsp;NO&nbsp;VERDICT.</div>
+  </div>
+</div>
+<main>
+  <div class="page-header">
+    <div class="page-kicker"><span class="ep-badge">EPISODE 07</span>SOURCE LIST</div>
+    <h1>Ethel Rosenberg: The Typewriter</h1>
+  </div>
+  <div class="notice">
+    <span class="tag tag-outline">Content Note</span>
+    <span class="notice-text">This case involves the death penalty, a graphic execution, and Cold War-era political and antisemitic persecution. Two of Ethel Rosenberg's sons are still living and have spent decades publicly contesting the government's case against their mother; we've tried to represent that ongoing effort accurately rather than treat it as closed history.</span>
+  </div>
+  <p class="intro">
+    This page lists the sources behind the claims made in this episode, tiered by how well-established each one is.
+    <strong>Confirmed</strong> facts come from court records, declassified government documents, or multiple independent sources.
+    <strong>Disputed</strong> items have conflicting accounts or evidence.
+    <strong>Single-source</strong> claims rest on one account with no corroboration — treat them accordingly.
+  </p>
+  <div class="legend">
+    <div class="legend-item"><span class="tag tag-confirmed">Confirmed</span> court &amp; multi-source</div>
+    <div class="legend-item"><span class="tag tag-disputed">Disputed</span> conflicting accounts</div>
+    <div class="legend-item"><span class="tag tag-single">Single source</span> uncorroborated</div>
+  </div>
+  <section>
+    <div class="section-head"><h2>Confirmed Facts</h2><span class="count">20 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Julius and Ethel Rosenberg were executed at Sing Sing on June 19, 1953, for conspiracy to commit espionage — commonly described as the only American civilians executed for espionage in U.S. peacetime.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Julius_and_Ethel_Rosenberg" target="_blank" rel="noopener">Wikipedia — Julius and Ethel Rosenberg</a>; <a href="https://www.fbi.gov/history/cases-and-criminals/atom-spy-caserosenbergs" target="_blank" rel="noopener">FBI</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Julius was arrested on July 17, 1950; Ethel was arrested three weeks later, on August 11, 1950, without a comparable evidentiary chain against her at the time.</div>
+      <div class="src-cite">Source: <a href="https://www.fbi.gov/history/cases-and-criminals/atom-spy-caserosenbergs" target="_blank" rel="noopener">FBI</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The chain of identification that led to the arrests ran from Klaus Fuchs (caught by British intelligence) to courier Harry Gold to David Greenglass — an Army machinist at Los Alamos and Ethel's brother — who then named Julius as the man who recruited him.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Julius_and_Ethel_Rosenberg" target="_blank" rel="noopener">Wikipedia — Julius and Ethel Rosenberg</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The Jell-O box recognition signal is documented in the actual trial exhibit record: Julius cut the torn side panel from a Jell-O box into two irregular pieces so that courier Harry Gold could identify himself to the Greenglasses.</div>
+      <div class="src-cite">Source: <a href="https://prologue.blogs.archives.gov/2011/04/05/fat-man-little-boy-a-packet-of-jello/" target="_blank" rel="noopener">National Archives</a>; <a href="https://www.alamy.com/jell-o-box-exhibit-used-in-the-espionage-trial-of-julius-and-ethel-rosenberg-and-morton-sobell-image257685702.html" target="_blank" rel="noopener">Trial-exhibit caption</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">David Greenglass's account first included the claim that Ethel typed up his notes only in a revised statement given roughly ten days before the March 6, 1951 trial began; his earlier statements didn't include it, and grand jury testimony later released by court order in 2017 contains no mention of Ethel's involvement in typing or delivering secrets.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Julius_and_Ethel_Rosenberg" target="_blank" rel="noopener">Wikipedia — Julius and Ethel Rosenberg</a>; <a href="https://justiceforall.ca2.uscourts.gov/reenactments/the-trial-of-ethel-rosenberg/the-trial-of-ethel-rosenberg-timeline" target="_blank" rel="noopener">2nd Circuit — Trial of Ethel Rosenberg timeline</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In 2001, David Greenglass told New York Times reporter Sam Roberts that he never actually witnessed Ethel typing and believed his wife Ruth likely did it: "I frankly think [Ruth] did the typing, but I don't remember."</div>
+      <div class="src-cite">Source: <a href="https://justiceforall.ca2.uscourts.gov/reenactments/the-trial-of-ethel-rosenberg/the-trial-of-ethel-rosenberg-timeline" target="_blank" rel="noopener">2nd Circuit timeline</a>; <a href="https://www.cbsnews.com/news/david-greenglass-of-rosenberg-spying-case-dies" target="_blank" rel="noopener">CBS News</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The 1995 declassified VENONA cables show Julius operating under the Soviet codenames "Antenna" and later "Liberal." Ethel appears in cable traffic but was never assigned a codename of her own.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Julius_and_Ethel_Rosenberg" target="_blank" rel="noopener">Wikipedia — Julius and Ethel Rosenberg</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">A memo by NSA cryptologist Meredith Gardner, written August 22, 1950 — eleven days after Ethel's arrest — and declassified in 2024, concluded Ethel "knew about her husband's work, but that due to ill health she did not engage in the work herself."</div>
+      <div class="src-cite">Source: <a href="https://www.justsecurity.org/105873/ethel-rosenberg-wrongful-execution/" target="_blank" rel="noopener">Just Security</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">FBI Director J. Edgar Hoover, after receiving Gardner's assessment, recommended against the death penalty for Ethel in April 1951.</div>
+      <div class="src-cite">Source: <a href="https://www.justsecurity.org/105873/ethel-rosenberg-wrongful-execution/" target="_blank" rel="noopener">Just Security</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Judge Irving Kaufman conferred with lead prosecutor Irving Saypol the day before sentencing; the prosecution team itself held differing views on whether Ethel should receive death, with some reluctance to support it.</div>
+      <div class="src-cite">Source: <a href="https://washingtonmonthly.com/2023/06/19/the-judge-who-sentenced-the-rosenbergs/" target="_blank" rel="noopener">Washington Monthly</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Kaufman did engage in improper ex parte — private, one-sided — discussions with prosecutors during the case, but this wasn't publicly known until the 1970s, decades after the executions.</div>
+      <div class="src-cite">Source: <a href="https://washingtonmonthly.com/2023/06/19/the-judge-who-sentenced-the-rosenbergs/" target="_blank" rel="noopener">Washington Monthly</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Roy Cohn — then a 23-year-old assistant prosecutor on the case — went on to serve as Senator Joseph McCarthy's chief counsel (1951–1954), was indicted three times (bribery, perjury, fraud-adjacent charges) but never convicted, was disbarred in June 1986 for unethical conduct, and died of AIDS-related illness on August 2, 1986, having publicly claimed liver cancer until his death.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Roy_Cohn" target="_blank" rel="noopener">Wikipedia — Roy Cohn</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Cohn mentored a young Donald Trump as his personal attorney from 1973 to 1986.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Roy_Cohn" target="_blank" rel="noopener">Wikipedia — Roy Cohn</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Ivy Meeropol — Julius and Ethel's granddaughter — directed the 2019 documentary <em>Bully. Coward. Victim. The Story of Roy Cohn.</em></div>
+      <div class="src-cite">Source: <a href="https://www.imdb.com/title/tt9308256/" target="_blank" rel="noopener">IMDb</a>; <a href="https://forward.com/culture/448983/why-roy-cohn-a-bully-and-coward-was-also-a-victim/" target="_blank" rel="noopener">The Forward</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Appeals ran roughly two years; international clemency appeals came from figures including Pope Pius XII and Albert Einstein. President Eisenhower denied clemency twice, citing that the Rosenbergs' actions had "immeasurably increased the chances of atomic war."</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Julius_and_Ethel_Rosenberg" target="_blank" rel="noopener">Wikipedia — Julius and Ethel Rosenberg</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The execution was moved up from a planned 11:00 p.m. to 8:00 p.m. specifically so it would conclude before the Jewish Sabbath began at sundown on June 19, 1953, a Friday. Julius died after three electric shocks; Ethel's execution required five total, with eyewitnesses reporting smoke rising from her head.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Julius_and_Ethel_Rosenberg" target="_blank" rel="noopener">Wikipedia — Julius and Ethel Rosenberg</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Emanuel Bloch, the Rosenbergs' defense attorney, served as guardian for their sons Michael and Robert after the execution until a permanent home was found with Abel and Anne Meeropol. Bloch died of a heart attack in his Manhattan apartment on January 30, 1954, at age 52 — about seven months after the execution.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Emanuel_H._Bloch" target="_blank" rel="noopener">Wikipedia — Emanuel H. Bloch</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Abel Meeropol, writing under the pen name Lewis Allan, wrote "Strange Fruit," the anti-lynching song made famous by Billie Holiday. His son Robert Meeropol later founded the Rosenberg Fund for Children.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Abel_Meeropol" target="_blank" rel="noopener">Wikipedia — Abel Meeropol</a>; <a href="https://www.rfc.org/exonerate-ethel" target="_blank" rel="noopener">Rosenberg Fund for Children</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Michael and Robert Meeropol have formally appealed to Presidents Obama and Biden for a posthumous exoneration of Ethel; as of the most recent reporting located, neither acted. Codefendant Morton Sobell served over 18 years in prison, including time at Alcatraz, before publicly confessing his and Julius's guilt in 2008. David Greenglass died in 2014 at age 92, having spent decades living under an assumed name in Queens.</div>
+      <div class="src-cite">Source: <a href="https://www.rfc.org/newsletter/winter-spring-2025/evidence-exonerates-ethel-despite-biden-inaction" target="_blank" rel="noopener">Rosenberg Fund for Children</a>; <a href="https://en.wikipedia.org/wiki/Morton_Sobell" target="_blank" rel="noopener">Wikipedia — Morton Sobell</a>; <a href="https://www.cbsnews.com/news/david-greenglass-of-rosenberg-spying-case-dies" target="_blank" rel="noopener">CBS News</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Disputed / Theories</h2><span class="count">1 item</span></div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Was Ethel a knowing participant, or a wife used as leverage against her husband and brother?</strong> This is the episode's central, genuinely live debate. The declassified Gardner memo and Hoover's own recommendation against her execution support the "leverage, not spy" reading. But Alexander Vassiliev's KGB notebooks — transcribed from Soviet archives and published in 2009 — reportedly show Julius and Ethel in regular contact with at least two KGB agents, with a KGB notation stating Ethel "knows about her husband's work and personally knows" two of his contacts, and describe her as having played some role in recruiting David Greenglass and a separate source. That doesn't establish she was an active espionage agent the way Julius was, but it's a real complicating layer of evidence beyond the single VENONA mention with no codename.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Julius_and_Ethel_Rosenberg" target="_blank" rel="noopener">Wikipedia — Julius and Ethel Rosenberg</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Single-Source Claims</h2><span class="count">4 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Whether Roy Cohn personally lobbied Judge Kaufman for Ethel's death sentence. Cohn later claimed, in his own autobiography, to have personally pushed for Kaufman's appointment to the case and for Ethel to receive death. That claim rests solely on Cohn's own account — a man with a well-documented pattern of exaggerating his influence — and Cohn himself explicitly denied participating in any illegal ex parte discussions. Historians do confirm Kaufman had improper private contact with prosecutors during the case generally, but that wasn't revealed until the 1970s, and no source located ties it specifically to Cohn lobbying for Ethel's sentence. Treat this as Cohn's own uncorroborated boast, not an independently documented fact.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Roy_Cohn" target="_blank" rel="noopener">Wikipedia — Roy Cohn</a>; <a href="https://washingtonmonthly.com/2023/06/19/the-judge-who-sentenced-the-rosenbergs/" target="_blank" rel="noopener">Washington Monthly</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">The Communist Party USA's peak national membership figure — commonly cited as seventy-five to a hundred thousand, out of a U.S. population over 130 million at the time. This range is widely repeated in histories of the era but wasn't independently re-verified against a single authoritative source for this page.</div>
+      <div class="src-cite">Source: commonly repeated range in period historical treatments; not independently re-verified for this page</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">The claim that Judge Kaufman's later career became "otherwise known for liberal, civil-liberties-protective rulings" — a commonly noted irony in Rosenberg-case retrospectives, but not independently corroborated by a dedicated source for this page.</div>
+      <div class="src-cite">Source: commonly noted in retrospectives on the case; not independently corroborated for this page</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">The specific September 1945 date for the alleged typewriter incident is widely repeated in Rosenberg case literature, but the exact month and year weren't independently reconfirmed against a primary source for this page. (This is a separate event from the well-documented January 1945 Jell-O box incident.)</div>
+      <div class="src-cite">Source: widely repeated in case literature; not independently reconfirmed for this page</div>
+    </div>
+  </section>
+  <footer>
+    <p class="show-line">Precision &amp; Instinct with Simone Valdez and Eli Marchetti</p>
+    <p class="link-line"><a href="https://precisionandinstinct.taplink.bio">precisionandinstinct.taplink.bio</a> · Full episode list and where to listen</p>
+  </footer>
+</main>
+</body>
+</html>
