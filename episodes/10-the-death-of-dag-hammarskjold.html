@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Death of Dag Hammarskjöld — Source List — Precision and Instinct</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;0,800;0,900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14171a;
+    --text: #f2efe9;
+    --accent: #ec3013;
+    --navy: #1B2A3C;
+    --rust: #B8522C;
+    --divider: rgba(242,239,233,0.24);
+    --muted-55: rgba(242,239,233,0.55);
+    --muted-65: rgba(242,239,233,0.65);
+    --muted-70: rgba(242,239,233,0.70);
+    --muted-72: rgba(242,239,233,0.72);
+    --muted-78: rgba(242,239,233,0.78);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Archivo", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  a { color: inherit; text-decoration: none; }
+  /* — nav — */
+  .nav {
+    display: flex; align-items: center; gap: 24px;
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--divider);
+  }
+  .nav-brand {
+    font-weight: 900; font-size: 18px; letter-spacing: -0.18px;
+    margin-right: auto;
+  }
+  .nav-brand .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600; font-size: 19.8px;
+  }
+  .nav a { font-size: 14px; }
+  .nav a:hover, .nav a[aria-current="page"] { color: var(--accent); }
+  .nav .btn-primary {
+    background: var(--accent); color: var(--text);
+    font-weight: 800; font-size: 14px;
+    padding: 8px 14.4px; border-radius: 0;
+  }
+  /* — hero — */
+  .hero { position: relative; display: flex; height: 300px; }
+  .hero .navy { flex: 1; background: var(--navy); }
+  .hero .rust { flex: 1; background: var(--rust); }
+  .hero .split { width: 6px; background: #0e0e10; }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    padding: 24px 24px 0;
+  }
+  .hero-kicker {
+    display: flex; justify-content: space-between;
+    font-weight: 700; font-size: 11px; letter-spacing: 3.08px;
+    color: var(--muted-72); text-transform: uppercase;
+  }
+  .hero-title {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+  }
+  .hero-title .wordmark {
+    font-weight: 900; font-size: 46px; letter-spacing: -0.92px;
+    text-transform: uppercase;
+  }
+  .hero-title .wordmark .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600;
+  }
+  .hero-tagline {
+    font-weight: 700; font-size: 13px; letter-spacing: 4.42px;
+    color: var(--muted-78); text-transform: uppercase;
+    text-align: center; padding-bottom: 20px;
+  }
+  /* — main — */
+  main { max-width: 820px; margin: 0 auto; padding: 32px 16px 60px; }
+  .page-header { padding-bottom: 24px; border-bottom: 2px solid var(--divider); margin-bottom: 24px; }
+  .page-kicker { font-size: 13px; color: var(--muted-65); margin-bottom: 8px; }
+  .page-kicker .ep-badge {
+    display: inline-flex; align-items: center;
+    background: var(--navy); color: var(--text);
+    font-weight: 800; font-size: 11px; letter-spacing: 0.5px;
+    padding: 3px 10px; margin-right: 8px;
+  }
+  h1 { font-weight: 800; font-size: 42px; letter-spacing: -0.84px; margin: 0; }
+  .notice {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    background: #1e2226; border: 1px solid var(--divider);
+    padding: 12px 16px; margin-bottom: 24px;
+  }
+  .tag {
+    display: inline-flex; align-items: center; font-size: 11px; letter-spacing: 0.22px;
+    padding: 3px 10px;
+  }
+  .tag-outline { border: 1px solid var(--accent); color: var(--accent); }
+  .notice-text { font-size: 13px; color: var(--muted-70); }
+  .intro { font-size: 17px; margin-bottom: 16px; }
+  .intro strong { font-weight: 700; }
+  .legend { display: flex; flex-wrap: wrap; gap: 24px; padding: 16px 0 24px; font-size: 12px; color: var(--muted-65); }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+  .legend-item .tag { font-size: 11px; }
+  .tag-confirmed { border: 1px solid var(--text); color: var(--text); }
+  .tag-disputed { border: 1px solid var(--accent); color: var(--accent); }
+  .tag-single { background: var(--text); color: var(--bg); }
+  section { margin-bottom: 8px; }
+  .section-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-bottom: 12px; margin-bottom: 0;
+    border-bottom: 2px solid var(--divider);
+  }
+  .section-head h2 { font-weight: 800; font-size: 25px; margin: 0; }
+  .section-head .count { font-size: 13px; color: var(--muted-55); }
+  .src-row {
+    padding: 16px 12px; border: 1px solid var(--divider); border-top: none;
+  }
+  .src-row .tag { margin-bottom: 8px; }
+  .src-claim { font-size: 15px; margin-bottom: 6px; }
+  .src-cite { font-size: 12.5px; color: var(--muted-65); }
+  .src-cite a { color: var(--accent); }
+  .src-cite a:hover { text-decoration: underline; }
+  footer { padding-top: 24px; border-top: 2px solid var(--divider); margin-top: 32px; }
+  footer p { margin: 0 0 4px; }
+  footer .show-line { font-weight: 800; font-size: 15px; }
+  footer .link-line { font-size: 13px; color: var(--muted-55); }
+  footer .link-line a { color: var(--accent); }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <span class="nav-brand">PRECISION <span class="amp">&amp;</span> INSTINCT</span>
+  <a href="/precision-and-instinct-notes/episodes/">Episodes</a>
+  <a href="/precision-and-instinct-notes/episodes/10-the-death-of-dag-hammarskjold.html" aria-current="page">Sources</a>
+  <a href="https://precisionandinstinct.taplink.bio">Listen</a>
+  <a class="btn-primary" href="https://precisionandinstinct.taplink.bio">Where to listen →</a>
+</nav>
+<div class="hero">
+  <div class="navy"></div>
+  <div class="split"></div>
+  <div class="rust"></div>
+  <div class="hero-overlay">
+    <div class="hero-kicker">
+      <span>PRECISION AND INSTINCT</span>
+      <span>SOURCE LIST</span>
+    </div>
+    <div class="hero-title">
+      <div class="wordmark">PRECISION <span class="amp">&amp;</span> INSTINCT</div>
+    </div>
+    <div class="hero-tagline">DEBATE.&nbsp;&nbsp;NO&nbsp;VERDICT.</div>
+  </div>
+</div>
+<main>
+  <div class="page-header">
+    <div class="page-kicker"><span class="ep-badge">EPISODE 10</span>SOURCE LIST</div>
+    <h1>The Death of Dag Hammarskjöld</h1>
+  </div>
+  <div class="notice">
+    <span class="tag tag-outline">Open Investigation</span>
+    <span class="notice-text">This case directly implicates real, currently-existing governments and intelligence services in a possible assassination of a sitting UN official. The United Nations' own inquiry remains formally open as of this writing, with the Secretary-General actively pressing member states to release records — the picture could still change.</span>
+  </div>
+  <p class="intro">
+    This page lists the sources behind the claims made in this episode, tiered by how well-established each one is.
+    <strong>Confirmed</strong> facts come from official investigative records, UN reports, or multiple independent sources.
+    <strong>Disputed</strong> items have conflicting accounts or an unresolved question.
+    <strong>Single-source</strong> claims rest on one account with no corroboration — treat them accordingly.
+  </p>
+  <div class="legend">
+    <div class="legend-item"><span class="tag tag-confirmed">Confirmed</span> official record &amp; multi-source</div>
+    <div class="legend-item"><span class="tag tag-disputed">Disputed</span> conflicting accounts</div>
+    <div class="legend-item"><span class="tag tag-single">Single source</span> uncorroborated</div>
+  </div>
+  <section>
+    <div class="section-head"><h2>Confirmed Facts</h2><span class="count">7 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">UN Secretary-General Dag Hammarskjöld's chartered DC-6B crashed roughly 15 kilometers from Ndola Airport, Northern Rhodesia, on the night of September 17–18, 1961, while en route to Congo Crisis ceasefire talks. All 16 people aboard died. Hammarskjöld's body was found separate from the rest of the wreckage.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/1961_Ndola_Transair_Sweden_DC-6_crash" target="_blank" rel="noopener">Wikipedia — 1961 Ndola Transair Sweden DC-6 crash</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The Rhodesian Board of Investigation's official finding: the pilot flew too low and struck trees. No physical evidence of a bomb, missile, or hijacking was found in the wreckage search.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/1961_Ndola_Transair_Sweden_DC-6_crash" target="_blank" rel="noopener">Wikipedia — 1961 Ndola Transair Sweden DC-6 crash</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Sgt. Harold Julien, the crash's sole initial survivor, died five days later. His statements describing explosions before the crash were judged inconsistent by investigators at the time.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/1961_Ndola_Transair_Sweden_DC-6_crash" target="_blank" rel="noopener">Wikipedia — 1961 Ndola Transair Sweden DC-6 crash</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The UN's own 1962 Commission of Investigation reviewed the Rhodesian findings but did not reach a conclusive determination of cause. It did document three separate procedural delays in the search-and-rescue response.</div>
+      <div class="src-cite">Source: <a href="https://www.daghammarskjold.se/dag-hammarskjold/death-dag-hammarskjold/" target="_blank" rel="noopener">daghammarskjold.se</a>; <a href="https://en.wikipedia.org/wiki/1961_Ndola_Transair_Sweden_DC-6_crash" target="_blank" rel="noopener">Wikipedia — 1961 Ndola Transair Sweden DC-6 crash</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The independent Sedley Commission (2012–2013), led by jurist Stephen Sedley, formally recommended the UN reopen its inquiry, and presented its findings at The Hague in September 2013.</div>
+      <div class="src-cite">Source: <a href="https://www.daghammarskjold.se/dag-hammarskjold/death-dag-hammarskjold/" target="_blank" rel="noopener">daghammarskjold.se</a>; <a href="http://www.hammarskjoldcommission.org/background/index.html" target="_blank" rel="noopener">The Hammarskjöld Commission</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The UN appointed Mohamed Chande Othman, Chief Justice of Tanzania, as its "eminent person" to continue the inquiry. His most recent report (December 2022) states that an external attack remains a plausible cause alongside human error, and that specific member states are "almost certainly" withholding relevant archival material.</div>
+      <div class="src-cite">Source: <a href="https://www.un.org/en/delegate/63-years-later-mystery-still-surrounds-death-dag-hammarskj%C3%B6ld" target="_blank" rel="noopener">UN.org</a>; <a href="https://www.rferl.org/a/un-hammarskjold-death-mystery/25100986.html" target="_blank" rel="noopener">RFE/RL</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">As of the UN's October 2024 report, the investigation remains formally open, with continued partial non-disclosure by some member states and Secretary-General António Guterres personally pressing governments to release records.</div>
+      <div class="src-cite">Source: <a href="https://www.un.org/en/delegate/63-years-later-mystery-still-surrounds-death-dag-hammarskj%C3%B6ld" target="_blank" rel="noopener">UN.org</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Disputed / Theories</h2><span class="count">3 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Accident versus external attack.</strong> The 1961 Rhodesian finding was pilot error. The UN's own ongoing review, through its appointed eminent person, has treated external attack or sabotage as a live, plausible cause rather than ruling it out — this is not a settled question, and the UN itself has not resolved it.</div>
+      <div class="src-cite">Source: <a href="https://www.un.org/en/delegate/63-years-later-mystery-still-surrounds-death-dag-hammarskj%C3%B6ld" target="_blank" rel="noopener">UN.org</a>; <a href="https://en.wikipedia.org/wiki/1961_Ndola_Transair_Sweden_DC-6_crash" target="_blank" rel="noopener">Wikipedia</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Who, if anyone, brought the plane down.</strong> Competing named-actor theories exist with no consensus: a Katangese-flown Fouga Magister piloted by Belgian pilot Jan van Risseghem; a German-supplied Dornier Do-28A (a theory proposed by historian Torben Gülstorff); and unnamed foreign paramilitary or intelligence personnel referenced in Othman's reports but not identified.</div>
+      <div class="src-cite">Source: <a href="https://foreignpolicy.com/2022/02/15/hammarskjold-plane-crash-united-nations/" target="_blank" rel="noopener">Foreign Policy</a>; <a href="https://www.rferl.org/a/un-hammarskjold-death-mystery/25100986.html" target="_blank" rel="noopener">RFE/RL</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>The cause of bullet wounds found on two of Hammarskjöld's Swedish bodyguards.</strong> The official 1961 explanation was exploding ammunition cooking off in the post-crash fire. Ballistics experts testifying before the Sedley Commission in 2013 disputed that this is physically possible, given how the wound pattern matched a fired weapon rather than loose rounds detonating in heat. This finding has stood unrebutted in the public record since 2013, but it does not by itself establish who fired, or that it happened before rather than during the crash.</div>
+      <div class="src-cite">Source: <a href="https://www.daghammarskjold.se/dag-hammarskjold/death-dag-hammarskjold/" target="_blank" rel="noopener">daghammarskjold.se</a>; <a href="http://www.hammarskjoldcommission.org/background/index.html" target="_blank" rel="noopener">The Hammarskjöld Commission</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Single-Source Claims</h2><span class="count">4 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Former NSA operator Charles Southall's account of a radio intercept ("I've hit it… it's crashing") allegedly heard from a Cyprus listening station the night of the crash, and his identification of Jan van Risseghem as the pilot involved. This rests on one man's decades-later recollection, never independently verified.</div>
+      <div class="src-cite">Source: reported by <a href="https://foreignpolicy.com/2022/02/15/hammarskjold-plane-crash-united-nations/" target="_blank" rel="noopener">Foreign Policy</a> and The Guardian (2014), citing Southall directly</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Maj. Gen. Bjørn Egge's 2005 claim that he saw a forehead bullet wound on Hammarskjöld's body that is absent from postmortem photos. This is one witness's account, given 44 years after the fact, not corroborated by other autopsy records reviewed publicly.</div>
+      <div class="src-cite">Source: cited via <a href="https://foreignpolicy.com/2022/02/15/hammarskjold-plane-crash-united-nations/" target="_blank" rel="noopener">Foreign Policy</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Letters surfaced via South Africa's 1998 Truth and Reconciliation Commission alleging MI5, CIA, and South African intelligence involvement, including a claim of a bomb rigged in the plane's wheel bay. Their provenance has never been independently established — the letters' authenticity remains unconfirmed, and the UK Foreign Office has suggested they may be Soviet-era disinformation.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/1961_Ndola_Transair_Sweden_DC-6_crash" target="_blank" rel="noopener">Wikipedia</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Witness interviews conducted by researcher Göran Björkdahl pointing toward a Union Minière (mining-company) motive. This material is described only in secondary reporting; the underlying interviews have not been independently published in full.</div>
+      <div class="src-cite">Source: described via <a href="https://foreignpolicy.com/2022/02/15/hammarskjold-plane-crash-united-nations/" target="_blank" rel="noopener">Foreign Policy</a></div>
+    </div>
+  </section>
+  <footer>
+    <p class="show-line">Precision &amp; Instinct with Simone Valdez and Eli Marchetti</p>
+    <p class="link-line"><a href="https://precisionandinstinct.taplink.bio">precisionandinstinct.taplink.bio</a> · Full episode list and where to listen</p>
+  </footer>
+</main>
+</body>
+</html>
