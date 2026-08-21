@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Le Prédateur des Bois — Source List — Precision and Instinct</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;0,800;0,900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14171a;
+    --text: #f2efe9;
+    --accent: #ec3013;
+    --navy: #1B2A3C;
+    --rust: #B8522C;
+    --divider: rgba(242,239,233,0.24);
+    --muted-55: rgba(242,239,233,0.55);
+    --muted-65: rgba(242,239,233,0.65);
+    --muted-70: rgba(242,239,233,0.70);
+    --muted-72: rgba(242,239,233,0.72);
+    --muted-78: rgba(242,239,233,0.78);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Archivo", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  a { color: inherit; text-decoration: none; }
+  /* — nav — */
+  .nav {
+    display: flex; align-items: center; gap: 24px;
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--divider);
+  }
+  .nav-brand {
+    font-weight: 900; font-size: 18px; letter-spacing: -0.18px;
+    margin-right: auto;
+  }
+  .nav-brand .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600; font-size: 19.8px;
+  }
+  .nav a { font-size: 14px; }
+  .nav a:hover, .nav a[aria-current="page"] { color: var(--accent); }
+  .nav .btn-primary {
+    background: var(--accent); color: var(--text);
+    font-weight: 800; font-size: 14px;
+    padding: 8px 14.4px; border-radius: 0;
+  }
+  /* — hero — */
+  .hero { position: relative; display: flex; height: 300px; }
+  .hero .navy { flex: 1; background: var(--navy); }
+  .hero .rust { flex: 1; background: var(--rust); }
+  .hero .split { width: 6px; background: #0e0e10; }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    padding: 24px 24px 0;
+  }
+  .hero-kicker {
+    display: flex; justify-content: space-between;
+    font-weight: 700; font-size: 11px; letter-spacing: 3.08px;
+    color: var(--muted-72); text-transform: uppercase;
+  }
+  .hero-title {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+  }
+  .hero-title .wordmark {
+    font-weight: 900; font-size: 46px; letter-spacing: -0.92px;
+    text-transform: uppercase;
+  }
+  .hero-title .wordmark .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600;
+  }
+  .hero-tagline {
+    font-weight: 700; font-size: 13px; letter-spacing: 4.42px;
+    color: var(--muted-78); text-transform: uppercase;
+    text-align: center; padding-bottom: 20px;
+  }
+  /* — main — */
+  main { max-width: 820px; margin: 0 auto; padding: 32px 16px 60px; }
+  .page-header { padding-bottom: 24px; border-bottom: 2px solid var(--divider); margin-bottom: 24px; }
+  .page-kicker { font-size: 13px; color: var(--muted-65); margin-bottom: 8px; }
+  .page-kicker .ep-badge {
+    display: inline-flex; align-items: center;
+    background: var(--navy); color: var(--text);
+    font-weight: 800; font-size: 11px; letter-spacing: 0.5px;
+    padding: 3px 10px; margin-right: 8px;
+  }
+  h1 { font-weight: 800; font-size: 42px; letter-spacing: -0.84px; margin: 0; }
+  .notice {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    background: #1e2226; border: 1px solid var(--divider);
+    padding: 12px 16px; margin-bottom: 24px;
+  }
+  .tag {
+    display: inline-flex; align-items: center; font-size: 11px; letter-spacing: 0.22px;
+    padding: 3px 10px;
+  }
+  .tag-outline { border: 1px solid var(--accent); color: var(--accent); }
+  .notice-text { font-size: 13px; color: var(--muted-70); }
+  .intro { font-size: 17px; margin-bottom: 16px; }
+  .intro strong { font-weight: 700; }
+  .legend { display: flex; flex-wrap: wrap; gap: 24px; padding: 16px 0 24px; font-size: 12px; color: var(--muted-65); }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+  .legend-item .tag { font-size: 11px; }
+  .tag-confirmed { border: 1px solid var(--text); color: var(--text); }
+  .tag-disputed { border: 1px solid var(--accent); color: var(--accent); }
+  .tag-single { background: var(--text); color: var(--bg); }
+  section { margin-bottom: 8px; }
+  .section-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-bottom: 12px; margin-bottom: 0;
+    border-bottom: 2px solid var(--divider);
+  }
+  .section-head h2 { font-weight: 800; font-size: 25px; margin: 0; }
+  .section-head .count { font-size: 13px; color: var(--muted-55); }
+  .src-row {
+    padding: 16px 12px; border: 1px solid var(--divider); border-top: none;
+  }
+  .src-row .tag { margin-bottom: 8px; }
+  .src-claim { font-size: 15px; margin-bottom: 6px; }
+  .src-cite { font-size: 12.5px; color: var(--muted-65); }
+  .src-cite a { color: var(--accent); }
+  .src-cite a:hover { text-decoration: underline; }
+  footer { padding-top: 24px; border-top: 2px solid var(--divider); margin-top: 32px; }
+  footer p { margin: 0 0 4px; }
+  footer .show-line { font-weight: 800; font-size: 15px; }
+  footer .link-line { font-size: 13px; color: var(--muted-55); }
+  footer .link-line a { color: var(--accent); }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <span class="nav-brand">PRECISION <span class="amp">&amp;</span> INSTINCT</span>
+  <a href="/precision-and-instinct-notes/episodes/">Episodes</a>
+  <a href="/precision-and-instinct-notes/episodes/08-le-predateur-des-bois.html" aria-current="page">Sources</a>
+  <a href="https://precisionandinstinct.taplink.bio">Listen</a>
+  <a class="btn-primary" href="https://precisionandinstinct.taplink.bio">Where to listen →</a>
+</nav>
+<div class="hero">
+  <div class="navy"></div>
+  <div class="split"></div>
+  <div class="rust"></div>
+  <div class="hero-overlay">
+    <div class="hero-kicker">
+      <span>PRECISION AND INSTINCT</span>
+      <span>SOURCE LIST</span>
+    </div>
+    <div class="hero-title">
+      <div class="wordmark">PRECISION <span class="amp">&amp;</span> INSTINCT</div>
+    </div>
+    <div class="hero-tagline">DEBATE.&nbsp;&nbsp;NO&nbsp;VERDICT.</div>
+  </div>
+</div>
+<main>
+  <div class="page-header">
+    <div class="page-kicker"><span class="ep-badge">EPISODE 08</span>SOURCE LIST</div>
+    <h1>Le Prédateur des Bois</h1>
+  </div>
+  <div class="notice">
+    <span class="tag tag-outline">Developing Story</span>
+    <span class="notice-text">This episode centers on a French legal ruling from three weeks before recording, and the underlying legal question is still unsettled — the legislature could revisit it. No court ever ruled on the legality of the specific technique used to identify the suspect in this case, since he died before trial. A real, uninvolved private individual (a distant cousin) is discussed without being named beyond what's already public record.</span>
+  </div>
+  <p class="intro">
+    This page lists the sources behind the claims made in this episode, tiered by how well-established each one is.
+    <strong>Confirmed</strong> facts come from official statements, court/legislative records, or multiple independent sources.
+    <strong>Disputed</strong> items have conflicting readings or an unresolved legal question.
+    <strong>Single-source</strong> claims rest on one account with no corroboration — treat them accordingly.
+  </p>
+  <div class="legend">
+    <div class="legend-item"><span class="tag tag-confirmed">Confirmed</span> official record &amp; multi-source</div>
+    <div class="legend-item"><span class="tag tag-disputed">Disputed</span> conflicting accounts</div>
+    <div class="legend-item"><span class="tag tag-single">Single source</span> uncorroborated</div>
+  </div>
+  <section>
+    <div class="section-head"><h2>Confirmed Facts</h2><span class="count">10 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Bruno Llambrich committed five documented rapes in the Paris region between 1998 and 2008. DNA was recovered at every scene — the same profile, five times — but it never matched anyone in FNAEG, France's national DNA database.</div>
+      <div class="src-cite">Source: <a href="https://association-avane.fr/le-predateur-des-bois/" target="_blank" rel="noopener">Association AVANE</a>; <a href="https://www.ici.fr/infos/faits-divers-justice/cold-cases-des-enqueteurs-des-experts-et-des-avocats-creent-une-association-d-aide-aux-victimes-1179604" target="_blank" rel="noopener">ICI (Radio France)</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Recreational and ancestry-focused genetic testing is criminally prohibited for French citizens under Article 16-10 of the Civil Code, punishable by a fine of up to €3,750.</div>
+      <div class="src-cite">Source: <a href="https://dsp-avocat.com/le-recours-a-la-genealogie-genetique-dans-les-procedures-penales/" target="_blank" rel="noopener">Me Louise Dumont Saint Priest</a>; <a href="https://minier-avocat-carpentras.fr/loi-sure/" target="_blank" rel="noopener">Minier Avocat</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In August 2021, investigating judges used a formal cross-border legal channel (a rogatory request) to have the FBI run the crime-scene DNA profile against a US commercial genealogy database — the same category of test French citizens are legally barred from using on themselves. Contemporaneous reporting describes this as the first confirmed use of the technique in French criminal history.</div>
+      <div class="src-cite">Source: <a href="https://association-avane.fr/le-predateur-des-bois/" target="_blank" rel="noopener">Association AVANE</a>; <a href="https://dsp-avocat.com/le-recours-a-la-genealogie-genetique-dans-les-procedures-penales/" target="_blank" rel="noopener">Me Louise Dumont Saint Priest</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The FBI-assisted search identified a distant cousin who had submitted his own DNA to a US ancestry service for personal reasons; conventional genealogical research then narrowed the family tree to Llambrich. The cousin had no involvement in the crimes, and there's no indication he knew his data would be used this way.</div>
+      <div class="src-cite">Source: <a href="https://association-avane.fr/le-predateur-des-bois/" target="_blank" rel="noopener">Association AVANE</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Llambrich was arrested at his home in Courtry on December 13, 2022. Paris chief prosecutor Laure Beccuau publicly confirmed both FBI involvement and the genetic-genealogy method in an official statement.</div>
+      <div class="src-cite">Source: <a href="https://association-avane.fr/le-predateur-des-bois/" target="_blank" rel="noopener">Association AVANE</a>; official prosecutorial statement, cited via <a href="https://legrele.forumactif.org/t5p125-le-predateur-des-boisqui-est-il" target="_blank" rel="noopener">contemporaneous coverage</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Llambrich died by suicide in pretrial detention at Fleury-Mérogis in March 2024. He had been DNA-matched to all five attacks and had largely confessed, but was never tried — meaning no court ever ruled on the legality of the method used to identify him.</div>
+      <div class="src-cite">Source: <a href="https://association-avane.fr/le-predateur-des-bois/" target="_blank" rel="noopener">Association AVANE</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In March 2026, CNIL — France's data protection authority — issued a formal opinion on the pending SURE bill's genetic-genealogy provisions, calling the proposed judicial-authorization safeguard insufficient and citing FNAEG's history of scope expansion since the 1990s as grounds for concern.</div>
+      <div class="src-cite">Source: <a href="https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000053702370" target="_blank" rel="noopener">CNIL / Légifrance — Délibération 2026-021</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">The SURE bill's genetic-genealogy provision — modeled partly on 2025 laws in Sweden and Denmark — passed the French Senate on April 14, 2026 and the National Assembly on July 2, 2026; the full criminal-justice law received final parliamentary adoption on July 9, 2026.</div>
+      <div class="src-cite">Source: <a href="https://kohenavocats.com/genealogie-genetique-enquete-penale-projet-loi-sure-adn-cold-cases-fnaeg-cedh-2026/" target="_blank" rel="noopener">Me Hassan Kohen</a>; <a href="https://kohenavocats.com/genealogie-genetique-enquetes-criminelles-vote-assemblee-2-juillet-2026/" target="_blank" rel="noopener">Me Hassan Kohen</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">On July 23, 2026, France's Conseil constitutionnel struck down the genetic-genealogy provision specifically (decision n° 2026-909 DC), citing inadequate consent and data-retention safeguards. Two other provisions in the same bill — a "genetic composite sketching" technique and a proposed forensic-psychologist police status — were struck down in the same ruling.</div>
+      <div class="src-cite">Source: <a href="https://kohenavocats.com/censure-conseil-constitutionnel-genealogie-genetique-loi-justice-criminelle-23-juillet-2026/" target="_blank" rel="noopener">Me Hassan Kohen</a>; <a href="https://www.laquadrature.net/2026/07/24/qsptag-332-24-juillet-2026/" target="_blank" rel="noopener">La Quadrature du Net</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">As of this writing (August 2026), genetic-genealogy investigation of the kind used to identify Llambrich has no valid legal basis in France.</div>
+      <div class="src-cite">Source: <a href="https://kohenavocats.com/censure-conseil-constitutionnel-genealogie-genetique-loi-justice-criminelle-23-juillet-2026/" target="_blank" rel="noopener">Me Hassan Kohen</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Disputed / Theories</h2><span class="count">3 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Whether the original 2021–22 use of the technique was itself illegal conduct by the French state</strong>, given no domestic legal basis existed for it at the time. No court has ever definitively ruled on this specific instance — Llambrich died before trial. This is a genuine legal gray zone, not a settled question.</div>
+      <div class="src-cite">Source: <a href="https://association-avane.fr/le-predateur-des-bois/" target="_blank" rel="noopener">Association AVANE</a>; <a href="https://dsp-avocat.com/le-recours-a-la-genealogie-genetique-dans-les-procedures-penales/" target="_blank" rel="noopener">Me Louise Dumont Saint Priest</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>How broadly the July 2026 ruling should be read.</strong> Legal commentary (Me Hassan Kohen) frames it in narrower, fixable-drafting terms — a procedural failure to define consent and retention limits that a redrafted bill could cure. Digital-rights advocacy (La Quadrature du Net) frames it as vindication that the underlying approach violates privacy rights, specifically flagging the lack of consent from people swept into private genealogy databases.</div>
+      <div class="src-cite">Source: <a href="https://kohenavocats.com/censure-conseil-constitutionnel-genealogie-genetique-loi-justice-criminelle-23-juillet-2026/" target="_blank" rel="noopener">Me Hassan Kohen</a>; <a href="https://www.laquadrature.net/2026/07/24/qsptag-332-24-juillet-2026/" target="_blank" rel="noopener">La Quadrature du Net</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Whether "exceptional and subsidiary" use — the standard the now-voided bill proposed, modeled on Sweden and Denmark's narrower 2025 laws — would have been an adequate safeguard,</strong> or whether any consultation of non-consenting third parties' genetic data is inherently disproportionate regardless of how it's bounded. No source resolves this; it's the episode's central live disagreement.</div>
+      <div class="src-cite">Source: <a href="https://kohenavocats.com/genealogie-genetique-enquete-penale-projet-loi-sure-adn-cold-cases-fnaeg-cedh-2026/" target="_blank" rel="noopener">Me Hassan Kohen</a>; <a href="https://kohenavocats.com/genealogie-genetique-enquetes-criminelles-vote-assemblee-2-juillet-2026/" target="_blank" rel="noopener">Me Hassan Kohen</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Single-Source Claims</h2><span class="count">3 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">The claim that investigators privately anticipated legal risk before routing the request through the FBI, rather than only realizing it in hindsight. This traces to a single ICI/Radio France investigative feature; no second outlet independently corroborates specific internal acknowledgment of legal risk going in.</div>
+      <div class="src-cite">Source: <a href="https://www.ici.fr/infos/faits-divers-justice/cold-cases-des-enqueteurs-des-experts-et-des-avocats-creent-une-association-d-aide-aux-victimes-1179604" target="_blank" rel="noopener">ICI (Radio France)</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">The claim that Llambrich's lawyer said he "always intended" to confess and face his victims in court. This comes from a single secondhand citation of a Le Parisien interview, repeated via a victims'-advocacy association — self-serving, post-mortem, single-chain sourcing.</div>
+      <div class="src-cite">Source: <a href="https://association-avane.fr/le-predateur-des-bois/" target="_blank" rel="noopener">Association AVANE</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">The estimate that 100,000–200,000 French residents use prohibited recreational DNA tests annually, with roughly 2 million having ever used them, and that enforcement is effectively symbolic. The annual figure originates in a National Assembly amendment's own supporting rationale — a legislator's stated justification, not an independent study — repeated by a secondary genealogy-industry blog; the cumulative figure comes from separate press coverage of a different 2026 bill. These are two different metrics that aren't in real conflict, but neither is independently audited.</div>
+      <div class="src-cite">Source: <a href="https://lcp.fr/actualites/tests-adn-recreatifs-une-deputee-veut-legaliser-une-pratique-interdite-en-france-435980" target="_blank" rel="noopener">LCP (Assemblée nationale)</a>; <a href="https://www.assemblee-nationale.fr/dyn/15/amendements/2658/CSBIOETH/1147.pdf" target="_blank" rel="noopener">Assemblée nationale — Amendement n°1147</a>; <a href="https://geneafinder.com/blog/en/13-342/recreational-dna-tests-what-risks-for-your-personal-data-and-privacy" target="_blank" rel="noopener">Geneafinder</a></div>
+    </div>
+  </section>
+  <footer>
+    <p class="show-line">Precision &amp; Instinct with Simone Valdez and Eli Marchetti</p>
+    <p class="link-line"><a href="https://precisionandinstinct.taplink.bio">precisionandinstinct.taplink.bio</a> · Full episode list and where to listen</p>
+  </footer>
+</main>
+</body>
+</html>
