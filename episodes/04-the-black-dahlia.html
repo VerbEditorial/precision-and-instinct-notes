@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Black Dahlia — Source List — Precision and Instinct</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;0,800;0,900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14171a;
+    --text: #f2efe9;
+    --accent: #ec3013;
+    --navy: #1B2A3C;
+    --rust: #B8522C;
+    --divider: rgba(242,239,233,0.24);
+    --muted-55: rgba(242,239,233,0.55);
+    --muted-65: rgba(242,239,233,0.65);
+    --muted-70: rgba(242,239,233,0.70);
+    --muted-72: rgba(242,239,233,0.72);
+    --muted-78: rgba(242,239,233,0.78);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Archivo", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  a { color: inherit; text-decoration: none; }
+  /* — nav — */
+  .nav {
+    display: flex; align-items: center; gap: 24px;
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--divider);
+  }
+  .nav-brand {
+    font-weight: 900; font-size: 18px; letter-spacing: -0.18px;
+    margin-right: auto;
+  }
+  .nav-brand .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600; font-size: 19.8px;
+  }
+  .nav a { font-size: 14px; }
+  .nav a:hover, .nav a[aria-current="page"] { color: var(--accent); }
+  .nav .btn-primary {
+    background: var(--accent); color: var(--text);
+    font-weight: 800; font-size: 14px;
+    padding: 8px 14.4px; border-radius: 0;
+  }
+  /* — hero — */
+  .hero { position: relative; display: flex; height: 300px; }
+  .hero .navy { flex: 1; background: var(--navy); }
+  .hero .rust { flex: 1; background: var(--rust); }
+  .hero .split { width: 6px; background: #0e0e10; }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    padding: 24px 24px 0;
+  }
+  .hero-kicker {
+    display: flex; justify-content: space-between;
+    font-weight: 700; font-size: 11px; letter-spacing: 3.08px;
+    color: var(--muted-72); text-transform: uppercase;
+  }
+  .hero-title {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+  }
+  .hero-title .wordmark {
+    font-weight: 900; font-size: 46px; letter-spacing: -0.92px;
+    text-transform: uppercase;
+  }
+  .hero-title .wordmark .amp {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600;
+  }
+  .hero-tagline {
+    font-weight: 700; font-size: 13px; letter-spacing: 4.42px;
+    color: var(--muted-78); text-transform: uppercase;
+    text-align: center; padding-bottom: 20px;
+  }
+  /* — main — */
+  main { max-width: 820px; margin: 0 auto; padding: 32px 16px 60px; }
+  .page-header { padding-bottom: 24px; border-bottom: 2px solid var(--divider); margin-bottom: 24px; }
+  .page-kicker { font-size: 13px; color: var(--muted-65); margin-bottom: 8px; }
+  .page-kicker .ep-badge {
+    display: inline-flex; align-items: center;
+    background: var(--navy); color: var(--text);
+    font-weight: 800; font-size: 11px; letter-spacing: 0.5px;
+    padding: 3px 10px; margin-right: 8px;
+  }
+  h1 { font-weight: 800; font-size: 42px; letter-spacing: -0.84px; margin: 0; }
+  .notice {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    background: #1e2226; border: 1px solid var(--divider);
+    padding: 12px 16px; margin-bottom: 24px;
+  }
+  .tag {
+    display: inline-flex; align-items: center; font-size: 11px; letter-spacing: 0.22px;
+    padding: 3px 10px;
+  }
+  .tag-outline { border: 1px solid var(--accent); color: var(--accent); }
+  .notice-text { font-size: 13px; color: var(--muted-70); }
+  .intro { font-size: 17px; margin-bottom: 16px; }
+  .intro strong { font-weight: 700; }
+  .legend { display: flex; flex-wrap: wrap; gap: 24px; padding: 16px 0 24px; font-size: 12px; color: var(--muted-65); }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+  .legend-item .tag { font-size: 11px; }
+  .tag-confirmed { border: 1px solid var(--text); color: var(--text); }
+  .tag-disputed { border: 1px solid var(--accent); color: var(--accent); }
+  .tag-single { background: var(--text); color: var(--bg); }
+  section { margin-bottom: 8px; }
+  .section-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-bottom: 12px; margin-bottom: 0;
+    border-bottom: 2px solid var(--divider);
+  }
+  .section-head h2 { font-weight: 800; font-size: 25px; margin: 0; }
+  .section-head .count { font-size: 13px; color: var(--muted-55); }
+  .src-row {
+    padding: 16px 12px; border: 1px solid var(--divider); border-top: none;
+  }
+  .src-row .tag { margin-bottom: 8px; }
+  .src-claim { font-size: 15px; margin-bottom: 6px; }
+  .src-cite { font-size: 12.5px; color: var(--muted-65); }
+  .src-cite a { color: var(--accent); }
+  .src-cite a:hover { text-decoration: underline; }
+  footer { padding-top: 24px; border-top: 2px solid var(--divider); margin-top: 32px; }
+  footer p { margin: 0 0 4px; }
+  footer .show-line { font-weight: 800; font-size: 15px; }
+  footer .link-line { font-size: 13px; color: var(--muted-55); }
+  footer .link-line a { color: var(--accent); }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <span class="nav-brand">PRECISION <span class="amp">&amp;</span> INSTINCT</span>
+  <a href="/episodes/">Episodes</a>
+  <a href="/episodes/04-the-black-dahlia.html" aria-current="page">Sources</a>
+  <a href="https://precisionandinstinct.taplink.bio">Listen</a>
+  <a class="btn-primary" href="https://precisionandinstinct.taplink.bio">Where to listen →</a>
+</nav>
+<div class="hero">
+  <div class="navy"></div>
+  <div class="split"></div>
+  <div class="rust"></div>
+  <div class="hero-overlay">
+    <div class="hero-kicker">
+      <span>PRECISION AND INSTINCT</span>
+      <span>SOURCE LIST</span>
+    </div>
+    <div class="hero-title">
+      <div class="wordmark">PRECISION <span class="amp">&amp;</span> INSTINCT</div>
+    </div>
+    <div class="hero-tagline">DEBATE.&nbsp;&nbsp;NO&nbsp;VERDICT.</div>
+  </div>
+</div>
+<main>
+  <div class="page-header">
+    <div class="page-kicker"><span class="ep-badge">EPISODE 04</span>SOURCE LIST</div>
+    <h1>The Black Dahlia</h1>
+  </div>
+  <div class="notice">
+    <span class="tag tag-outline">Unsolved</span>
+    <span class="notice-text">This case remains formally open — no one has ever been charged. The two suspect theories described here are circumstantial and disputed among researchers; we don't present either as settled.</span>
+  </div>
+  <p class="intro">
+    This page lists the sources behind the claims made in this episode, tiered by how well-established each one is.
+    <strong>Confirmed</strong> facts come from court records, police reports, or multiple independent contemporaneous news sources.
+    <strong>Disputed</strong> items have conflicting accounts.
+    <strong>Single-source</strong> claims rest on one account with no corroboration — treat them accordingly.
+  </p>
+  <div class="legend">
+    <div class="legend-item"><span class="tag tag-confirmed">Confirmed</span> court &amp; multi-source</div>
+    <div class="legend-item"><span class="tag tag-disputed">Disputed</span> conflicting accounts</div>
+    <div class="legend-item"><span class="tag tag-single">Single source</span> uncorroborated</div>
+  </div>
+  <section>
+    <div class="section-head"><h2>Confirmed Facts</h2><span class="count">13 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">On January 15, 1947, a mother walking with her child discovered a body in a vacant lot on South Norton Avenue in Leimert Park, Los Angeles. It was Elizabeth Short, bisected at the waist using a technique resembling a hemicorporectomy, fully drained of blood, her face cut corner-to-corner in a "Glasgow smile," with the scene itself scrubbed clean and no blood found there.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Black_Dahlia" target="_blank" rel="noopener">Wikipedia — Black Dahlia</a> (citing the January 16, 1947 County Coroner autopsy)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Elizabeth Short was born in Boston in 1924. Her father Cleo Short's car was found abandoned on a bridge in 1930 and the family assumed he'd died, but he later resurfaced alive under a new life in California — which is part of why Short moved west in 1942, to reconnect with him.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Black_Dahlia" target="_blank" rel="noopener">Wikipedia — Black Dahlia</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In September 1943, Short was arrested for underage drinking at the El Paseo restaurant's bar in Santa Barbara. The resulting booking photo became the iconic public image later associated with the case, and her arrest fingerprints are what allowed the FBI to identify her body in 1947.</div>
+      <div class="src-cite">Source: <a href="https://www.independent.com/2018/06/07/black-dahlia-never-dies/" target="_blank" rel="noopener">Santa Barbara Independent — "The Black Dahlia Never Dies"</a>; <a href="https://en.wikipedia.org/wiki/Black_Dahlia" target="_blank" rel="noopener">Wikipedia — Black Dahlia</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Short had no film or stage credits and worked as a waitress. The "aspiring actress" label commonly attached to her is a media invention — press coverage at the time contradictorily characterized her as an actress, a sex worker, and other labels within the same news cycle.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Black_Dahlia" target="_blank" rel="noopener">Wikipedia — Black Dahlia</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Around January 24, 1947, a manila envelope arrived at the Los Angeles Examiner containing Short's birth certificate, business cards, photographs, and an address book embossed with the name "Mark Hansen." The contents had been wiped down with gasoline in an apparent attempt to destroy fingerprints, though partial prints were recovered — later compromised in transit to the FBI.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Black_Dahlia" target="_blank" rel="noopener">Wikipedia — Black Dahlia</a> (citing Gilmore, 2006)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Further taunting letters arrived on January 26 and 29, 1947, including a failed attempt to arrange a "surrender" and a note claiming the killing "was justified." An apparent suicide note referencing the killing was found in Venice, California, on March 14, 1947.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Black_Dahlia" target="_blank" rel="noopener">Wikipedia — Black Dahlia</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">LAPD received roughly 60 confessions during the initial investigation — a number that grew to over 500 across the following decades, some from people not even alive in 1947 — and interviewed more than 150 men as possible suspects, with roughly 750 investigators from LAPD and other departments involved at the case's peak.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Black_Dahlia" target="_blank" rel="noopener">Wikipedia — Black Dahlia</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Robert "Red" Manley, a traveling salesman, was the last person confirmed to have seen Short alive. He was investigated, passed multiple polygraph examinations, and was cleared.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Black_Dahlia" target="_blank" rel="noopener">Wikipedia — Black Dahlia</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Dr. George Hodel, a Los Angeles physician, was tried in 1949 for allegedly molesting his 14-year-old daughter Tamar and was acquitted. Between February 15 and March 27, 1950, the LA County DA's office bugged his home; he was recorded saying, in essence, that even if he'd killed the Black Dahlia, no one could prove it, and that his secretary — who might have talked — was already dead. That wiretap file was rediscovered in the DA's archives in 2003.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/George_Hodel" target="_blank" rel="noopener">Wikipedia — George Hodel</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Steve Hodel, George's son and a retired LAPD homicide detective, spent decades building the case against his father and located an LAPD file naming him as a suspect in the DA's own vault. Independent assessment of that case — including from historian William J. Mann and LAPD Detective Brian Carr — characterizes it as circumstantial: LAPD was never able to establish that Hodel and Short ever met, and Mann has suggested the wiretap statement may have been Hodel taunting investigators he knew were listening, rather than confessing.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/George_Hodel" target="_blank" rel="noopener">Wikipedia — George Hodel</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">A separate theory, advanced by journalist Piu Eatwell in her 2017 book <em>Black Dahlia, Red Rose</em>, holds that bellhop and former mortician's assistant Leslie Dillon carried out the killing on behalf of nightclub owner Mark Hansen — who had pursued and been rejected by Short, and whose address book was among the items mailed to the Examiner — with the crime scene identified as a room at the Aster Motel, where the owner reportedly found the room covered in blood the day after the murder and cleaned it up rather than report it. LAPD investigated both Hodel and Dillon seriously at the time — including tapping Hodel's phone and bringing Dillon in for questioning — without ever bringing charges against either.</div>
+      <div class="src-cite">Source: <a href="https://www.history.com/articles/who-killed-the-black-dahlia" target="_blank" rel="noopener">History.com — "Who Killed the Black Dahlia?"</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Degnan Boulevard, a real street in Leimert Park, runs near South Norton Avenue — less than a mile from where Short's body was found. The name is a genuine geographic coincidence with Suzanne Degnan, the six-year-old victim of Chicago's unrelated 1946 "Lipstick Murder" case, in a different city.</div>
+      <div class="src-cite">Source: <a href="https://blackdahliamystery.com/2023/03/knowledge-of-leimert-park/" target="_blank" rel="noopener">blackdahliamystery.com — "Knowledge of Leimert Park"</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">1940s-era LAPD corruption and evidence-handling problems are documented, including a September 1949 grand jury investigation into the department's homicide unit. Eatwell's book alleges that a lead detective on the case, Sgt. Finis Brown, had ties to Mark Hansen and was corrupt — a specific claim disputed by at least one other researcher (Larry Harnisch, who says he found no coverup in the DA files he reviewed). The broader claim that LAPD had a documented corruption problem in this era is well supported; the specific "corrupt lead detective" claim is contested among researchers.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Black_Dahlia" target="_blank" rel="noopener">Wikipedia — Black Dahlia</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Disputed / Theories</h2><span class="count">3 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>George Hodel vs. Leslie Dillon/Mark Hansen vs. no named suspect.</strong> This is the case's central, genuinely unresolved debate: two well-researched, mutually exclusive theories, each backed by a different author's independent research, neither ever resulting in charges. No source treats either as settled.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Black_Dahlia_suspects" target="_blank" rel="noopener">Wikipedia — Black Dahlia suspects</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Whether the George Hodel wiretap is meaningful evidence or overheard bravado.</strong> Independent historians are split — Mann reads it as Hodel taunting police he knew were listening, while Steve Hodel treats it as confession-adjacent. Both the wider literature and this episode present it as a live, two-sided question rather than settled fact.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/George_Hodel" target="_blank" rel="noopener">Wikipedia — George Hodel</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim"><strong>Whether 1940s LAPD corruption meaningfully compromised this specific investigation</strong>, or was a generic era-appropriate problem with no case-specific bearing. Eatwell and Harnisch disagree on this point; treating it as "a reason to distrust the whole process equally" rather than evidence for any one suspect is the more cautious, source-consistent position.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Black_Dahlia" target="_blank" rel="noopener">Wikipedia — Black Dahlia</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>Single-Source Claims</h2><span class="count">2 items</span></div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">The precise timing of the Aster Motel room's discovery: the best secondary source found describes the bloody room as discovered "the day following" the murder, not "the same morning" as sometimes repeated. Treat "the day after" as the more accurate framing if this detail is quoted.</div>
+      <div class="src-cite">Source: <a href="https://www.history.com/articles/who-killed-the-black-dahlia" target="_blank" rel="noopener">History.com — "Who Killed the Black Dahlia?"</a> (summarizing Eatwell)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">The idea that the Degnan Boulevard name coincidence is meaningfully significant, rather than simple geography, comes from a small number of fringe theorists rather than mainstream case literature — the more accurate framing is that it's a real but coincidental geographic overlap with an unrelated case.</div>
+      <div class="src-cite">Source: <a href="https://blackdahliamystery.com/2023/03/knowledge-of-leimert-park/" target="_blank" rel="noopener">blackdahliamystery.com — "Knowledge of Leimert Park"</a></div>
+    </div>
+  </section>
+  <footer>
+    <p class="show-line">Precision &amp; Instinct with Simone Valdez and Eli Marchetti</p>
+    <p class="link-line"><a href="https://precisionandinstinct.taplink.bio">precisionandinstinct.taplink.bio</a> · Full episode list and where to listen</p>
+  </footer>
+</main>
+</body>
+</html>
