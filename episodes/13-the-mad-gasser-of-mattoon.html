@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <title>The Mad Gasser of Mattoon — Source List — Precision and Instinct</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;0,800;0,900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  <style>
+  :root {
+  --bg: #14171a;
+--text: #f2efe9;
+  --accent: #ec3013;
+  --navy: #1B2A3C;
+--rust: #B8522C;
+  --divider: rgba(242,239,233,0.24);
+--muted-55: rgba(242,239,233,0.55);
+--muted-65: rgba(242,239,233,0.65);
+--muted-70: rgba(242,239,233,0.70);
+--muted-72: rgba(242,239,233,0.72);
+--muted-78: rgba(242,239,233,0.78);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+background: var(--bg);
+color: var(--text);
+font-family: "Archivo", system-ui, sans-serif;
+font-size: 15px;
+line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+.nav {
+  display: flex; align-items: center; gap: 24px;
+padding: 12px 16px;
+border-bottom: 2px solid var(--divider);
+}
+.nav-brand {
+font-weight: 900; font-size: 18px; letter-spacing: -0.18px;
+margin-right: auto;
+}
+.nav-brand .amp {
+font-family: "Playfair Display", Georgia, serif;
+font-style: italic; font-weight: 600; font-size: 19.8px;
+}
+.nav a { font-size: 14px; }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--accent); }
+  .nav .btn-primary {
+  background: var(--accent); color: var(--text);
+font-weight: 800; font-size: 14px;
+  padding: 8px 14.4px; border-radius: 0;
+  }
+.hero { position: relative; display: flex; height: 300px; }
+  .hero .navy { flex: 1; background: var(--navy); }
+  .hero .rust { flex: 1; background: var(--rust); }
+    .hero .split { width: 6px; background: #0e0e10; }
+.hero-overlay {
+position: absolute; inset: 0;
+display: flex; flex-direction: column;
+padding: 24px 24px 0;
+  }
+  .hero-kicker {
+display: flex; justify-content: space-between;
+font-weight: 700; font-size: 11px; letter-spacing: 3.08px;
+color: var(--muted-72); text-transform: uppercase;
+}
+.hero-title {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center;
+}
+.hero-title .wordmark {
+font-weight: 900; font-size: 46px; letter-spacing: -0.92px;
+text-transform: uppercase;
+}
+    .hero-title .wordmark .amp {
+  font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600;
+}
+.hero-tagline {
+font-weight: 700; font-size: 13px; letter-spacing: 4.42px;
+color: var(--muted-78); text-transform: uppercase;
+text-align: center; padding-bottom: 20px;
+}
+main { max-width: 820px; margin: 0 auto; padding: 32px 16px 60px; }
+.page-header { padding-bottom: 24px; border-bottom: 2px solid var(--divider); margin-bottom: 24px; }
+.page-kicker { font-size: 13px; color: var(--muted-65); margin-bottom: 8px; }
+.page-kicker .ep-badge {
+display: inline-flex; align-items: center;
+background: var(--navy); color: var(--text);
+font-weight: 800; font-size: 11px; letter-spacing: 0.5px;
+padding: 3px 10px; margin-right: 8px;
+}
+h1 { font-weight: 800; font-size: 42px; letter-spacing: -0.84px; margin: 0; }
+.notice {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+background: #1e2226; border: 1px solid var(--divider);
+padding: 12px 16px; margin-bottom: 24px;
+  }
+.tag {
+display: inline-flex; align-items: center; font-size: 11px; letter-spacing: 0.22px;
+padding: 3px 10px;
+}
+.tag-outline { border: 1px solid var(--accent); color: var(--accent); }
+.notice-text { font-size: 13px; color: var(--muted-70); }
+.intro { font-size: 17px; margin-bottom: 16px; }
+    .intro strong { font-weight: 700; }
+.legend { display: flex; flex-wrap: wrap; gap: 24px; padding: 16px 0 24px; font-size: 12px; color: var(--muted-65); }
+    .legend-item { display: flex; align-items: center; gap: 8px; }
+.legend-item .tag { font-size: 11px; }
+    .tag-confirmed { border: 1px solid var(--text); color: var(--text); }
+    .tag-disputed { border: 1px solid var(--accent); color: var(--accent); }
+.tag-single { background: var(--text); color: var(--bg); }
+section { margin-bottom: 8px; }
+.section-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding-bottom: 12px; margin-bottom: 0;
+border-bottom: 2px solid var(--divider);
+}
+  .section-head h2 { font-weight: 800; font-size: 25px; margin: 0; }
+.section-head .count { font-size: 13px; color: var(--muted-55); }
+.src-row {
+  padding: 16px 12px; border: 1px solid var(--divider); border-top: none;
+}
+.src-row .tag { margin-bottom: 8px; }
+.src-claim { font-size: 15px; margin-bottom: 6px; }
+.src-cite { font-size: 12.5px; color: var(--muted-65); }
+.src-cite a { color: var(--accent); }
+.src-cite a:hover { text-decoration: underline; }
+footer { padding-top: 24px; border-top: 2px solid var(--divider); margin-top: 32px; }
+footer p { margin: 0 0 4px; }
+footer .show-line { font-weight: 800; font-size: 15px; }
+footer .link-line { font-size: 13px; color: var(--muted-55); }
+footer .link-line a { color: var(--accent); }
+</style>
+  </head>
+  <body>
+  <nav class="nav">
+  <span class="nav-brand">PRECISION <span class="amp">&amp;</span> INSTINCT</span>
+  <a href="https://verbeditorial.github.io/precision-and-instinct-notes/">Episodes</a>
+  <a href="https://verbeditorial.github.io/precision-and-instinct-notes/" aria-current="page">Sources</a>
+  <a href="https://precisionandinstinct.taplink.bio">Listen</a>
+  <a class="btn-primary" href="https://precisionandinstinct.taplink.bio">Where to listen →</a>
+</nav>
+<div class="hero">
+<div class="navy"></div>
+<div class="split"></div>
+  <div class="rust"></div>
+  <div class="hero-overlay">
+  <div class="hero-kicker">
+  <span>PRECISION AND INSTINCT</span>
+  <span>SOURCE LIST</span>
+  </div>
+  <div class="hero-title">
+  <div class="wordmark">PRECISION <span class="amp">&amp;</span> INSTINCT</div>
+  </div>
+  <div class="hero-tagline">DEBATE.&nbsp;&nbsp;NO&nbsp;VERDICT.</div>
+  </div>
+  </div>
+  <main>
+  <div class="page-header">
+  <div class="page-kicker"><span class="ep-badge">EPISODE 13</span>SOURCE LIST</div>
+  <h1>The Mad Gasser of Mattoon</h1>
+  </div>
+  <div class="notice">
+  <span class="tag tag-outline">Unresolved Case</span>
+  <span class="notice-text">This case was never solved. No suspect was ever arrested or charged, and researchers still disagree on whether the September 1944 panic in Mattoon was driven by a real physical attacker, mass hysteria, or some combination of both.</span>
+  </div>
+  <p class="intro">
+  This page lists the sources behind the claims made in this episode, tiered by how well-established each one is.
+  <strong>Confirmed</strong> facts come from court records, police reports, or multiple independent contemporaneous news sources.
+  <strong>Disputed</strong> items have conflicting accounts.
+  <strong>Single-source</strong> claims rest on one account with no corroboration — treat them accordingly.
+  </p>
+  <div class="legend">
+  <div class="legend-item"><span class="tag tag-confirmed">Confirmed</span> court &amp; multi-source</div>
+  <div class="legend-item"><span class="tag tag-disputed">Disputed</span> conflicting accounts</div>
+  <div class="legend-item"><span class="tag tag-single">Single source</span> uncorroborated</div>
+  </div>
+  <section>
+  <div class="section-head"><h2>Confirmed Facts</h2><span class="count">10</span></div>
+    <div class="src-row">
+  <span class="tag tag-confirmed">Confirmed</span>
+  <div class="src-claim">On the evening of September 5, 1944, Beulah Cordes found a cloth balled up on her porch in Mattoon, Illinois; when she picked it up and smelled it, her lips swelled and her mouth and throat began burning.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a>; <a href="https://www.washingtonpost.com/history/2021/10/30/mad-gasser-mattoon-illinois-mystery/" target="_blank" rel="noopener">Washington Post</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-confirmed">Confirmed</span>
+  <div class="src-claim">A skeleton key and a tube of lipstick, neither belonging to the household, were found on the Cordes porch alongside the cloth. No connection between the three objects has ever been established.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a>; <a href="https://www.illinoistimes.com/arts-culture/the-case-of-the-mad-gasser-of-mattoon-11450083/" target="_blank" rel="noopener">Illinois Times</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-confirmed">Confirmed</span>
+  <div class="src-claim">The earliest dated incident on record was reported by Urban Raef and his wife on the night of August 31–September 1, 1944 — a sweet smell in their bedroom, nausea, and partial paralysis — though it did not become public until after later incidents.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a>; <a href="https://www.library.illinois.edu/hpnl/blog/the-mad-gasser-of-mattoon/" target="_blank" rel="noopener">University of Illinois HPNL Blog</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-confirmed">Confirmed</span>
+  <div class="src-claim">On September 1, 1944, Aline Kearney reported a sweet odor filling her bedroom, numbness in her legs, and her young daughter affected; her husband Bert reported seeing a man outside the window. The Mattoon Journal Gazette ran the story on its front page.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a>; <a href="https://www.washingtonpost.com/history/2021/10/30/mad-gasser-mattoon-illinois-mystery/" target="_blank" rel="noopener">Washington Post</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-confirmed">Confirmed</span>
+  <div class="src-claim">Donald M. Johnson's 1945 academic field study of the case — published by a University of Illinois researcher and still the foundational scholarly treatment — identified the Kearney story's front-page placement as the case's "index" event and interpreted the episode overall as an outbreak of mass hysteria.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a>; <a href="https://www.library.illinois.edu/hpnl/blog/the-mad-gasser-of-mattoon/" target="_blank" rel="noopener">University of Illinois HPNL Blog</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-confirmed">Confirmed</span>
+  <div class="src-claim">Reports of gas attacks accelerated through the first two weeks of September 1944, drew sustained Journal Gazette coverage, and prompted the involvement of Illinois State Police and FBI agents.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a>; <a href="https://theweek.com/news/world-news/us/957868/mystery-mad-gasser-mattoon" target="_blank" rel="noopener">The Week</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-confirmed">Confirmed</span>
+  <div class="src-claim">Mattoon's Commissioner of Public Health, Thomas V. Wright, stated publicly and on the record: "There is no doubt that a gas maniac exists and has made a number of attacks. But many of the reported attacks are nothing more than hysteria."</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a>; <a href="https://www.damninteresting.com/the-mad-gasser-of-mattoon/" target="_blank" rel="noopener">Damn Interesting</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-confirmed">Confirmed</span>
+  <div class="src-claim">On September 12, 1944, Police Chief C. E. Cole publicly floated an industrial explanation — carbon tetrachloride or trichloroethylene, possibly drifting from a nearby diesel engine plant. The plant denied the theory, and reports declined sharply within days of Cole's public statement.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a>; <a href="https://cromwell-intl.com/travel/usa/mattoon/" target="_blank" rel="noopener">Bob Cromwell, "The Mad Gasser of Mattoon"</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-confirmed">Confirmed</span>
+  <div class="src-claim">On September 18, 1944, Time magazine ran a national feature on the case under the title "The Mad Anesthetist," spreading the story well beyond Illinois.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a>; <a href="https://www.illinoistimes.com/arts-culture/the-case-of-the-mad-gasser-of-mattoon-11450083/" target="_blank" rel="noopener">Illinois Times</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-confirmed">Confirmed</span>
+  <div class="src-claim">No suspect was ever arrested or formally charged in connection with the case. Eighty-two years later, it remains officially unsolved.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a>; <a href="https://beltmag.com/the-mattoon-mad-gasser-looking-back-at-a-textbook-case-of-mass-hysteria/" target="_blank" rel="noopener">Belt Magazine</a></div>
+  </div>
+
+  </section>
+  <section>
+  <div class="section-head"><h2>Disputed / Theories</h2><span class="count">3</span></div>
+    <div class="src-row">
+  <span class="tag tag-disputed">Disputed</span>
+  <div class="src-claim">Mass hysteria vs. a real physical attacker. Johnson's 1945 study, and later researchers such as Robert Bartholomew, read the case as a textbook example of press-amplified collective hysteria. That reading has never fully accounted for the Cordes incident's documented chemical burns and the physical objects recovered at the scene.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a>; <a href="https://beltmag.com/the-mattoon-mad-gasser-looking-back-at-a-textbook-case-of-mass-hysteria/" target="_blank" rel="noopener">Belt Magazine</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-disputed">Disputed</span>
+  <div class="src-claim">Total number of reported incidents. Estimates range from the low twenties to as many as three dozen reported "attacks" over the two-week period, and the full list of who reported what on the night of September 6 has never been consistently reconciled across sources.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a>; <a href="https://theweek.com/news/world-news/us/957868/mystery-mad-gasser-mattoon" target="_blank" rel="noopener">The Week</a>; <a href="https://www.damninteresting.com/the-mad-gasser-of-mattoon/" target="_blank" rel="noopener">Damn Interesting</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-disputed">Disputed</span>
+  <div class="src-claim">The industrial-gas theory. Chief Cole's proposed explanation — solvent fumes drifting from a nearby diesel engine plant — was publicly denied by the plant and was never proven, though some accounts credit it with coinciding with the sharp decline in reports that followed.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a>; <a href="https://cromwell-intl.com/travel/usa/mattoon/" target="_blank" rel="noopener">Bob Cromwell, "The Mad Gasser of Mattoon"</a></div>
+  </div>
+
+  </section>
+  <section>
+  <div class="section-head"><h2>Single-Source Claims</h2><span class="count">6</span></div>
+    <div class="src-row">
+  <span class="tag tag-single">Single source</span>
+  <div class="src-claim">The Farley Llewellyn theory. A self-published 2003 book named a local man, Farley Llewellyn, as a possible source for at least the earliest incidents, citing his chemistry background and a home laboratory reportedly damaged by an explosion around this time. Wikipedia's own editors have flagged this section's sourcing as unreliable, and no other source corroborates the theory.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Talk:Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia Talk: Mad Gasser of Mattoon</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-single">Single source</span>
+  <div class="src-claim">A September 11, 1944 report described a suspect who did not match the "tall man" description established by the Kearney account — described instead as short and heavyset, wearing women's shoes. The witness account was never corroborated and no named suspect has ever been tied to it.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-single">Single source</span>
+  <div class="src-claim">A report from a Mrs. Leonard Burrell, describing a prowler who attempted to gas her, is one of the more solidly cited reports outside the Kearney and Cordes cases — but still rests on a single contemporaneous account.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-single">Single source</span>
+  <div class="src-claim">One of the last reports on record, from a Bertha Burch, described a "woman dressed as a man" — a description that had drifted considerably from the original "tall man" template by the case's final days.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-single">Single source</span>
+  <div class="src-claim">State's Attorney William Kidwell later attributed the panic to hysteria "fueled by a Journal Gazette reporter with a vivid imagination." No source reviewed for this episode identifies who that reporter, or the story's editor or publisher, actually was.</div>
+  <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Mad_Gasser_of_Mattoon" target="_blank" rel="noopener">Wikipedia, "Mad Gasser of Mattoon"</a>; <a href="https://www.damninteresting.com/the-mad-gasser-of-mattoon/" target="_blank" rel="noopener">Damn Interesting</a></div>
+  </div>
+
+  <div class="src-row">
+  <span class="tag tag-single">Single source</span>
+  <div class="src-claim">Urban Raef's brother was reportedly killed at Normandy in the months before the Raef household's own incident — a detail that appears in some secondary accounts of the case's wartime context but is not independently corroborated across multiple contemporaneous sources.</div>
+  <div class="src-cite">Source: <a href="https://www.library.illinois.edu/hpnl/blog/the-mad-gasser-of-mattoon/" target="_blank" rel="noopener">University of Illinois HPNL Blog</a></div>
+  </div>
+
+  </section>
+  <footer>
+  <p class="show-line">Precision &amp; Instinct with Simone Valdez and Eli Marchetti</p>
+  <p class="link-line"><a href="https://precisionandinstinct.taplink.bio">precisionandinstinct.taplink.bio</a> · Full episode list and where to listen</p>
+</footer>
+</main>
+</body>
+  </html>
