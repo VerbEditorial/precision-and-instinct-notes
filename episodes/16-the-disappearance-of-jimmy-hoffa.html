@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <title>The Disappearance of Jimmy Hoffa — Source List — Precision and Instinct</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;0,800;0,900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  <style>
+  :root {
+  --bg: #14171a;
+--text: #f2efe9;
+  --accent: #ec3013;
+  --navy: #1B2A3C;
+--rust: #B8522C;
+  --divider: rgba(242,239,233,0.24);
+--muted-55: rgba(242,239,233,0.55);
+--muted-65: rgba(242,239,233,0.65);
+--muted-70: rgba(242,239,233,0.70);
+--muted-72: rgba(242,239,233,0.72);
+--muted-78: rgba(242,239,233,0.78);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+background: var(--bg);
+color: var(--text);
+font-family: "Archivo", system-ui, sans-serif;
+font-size: 15px;
+line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+.nav {
+  display: flex; align-items: center; gap: 24px;
+padding: 12px 16px;
+border-bottom: 2px solid var(--divider);
+}
+.nav-brand {
+font-weight: 900; font-size: 18px; letter-spacing: -0.18px;
+margin-right: auto;
+}
+.nav-brand .amp {
+font-family: "Playfair Display", Georgia, serif;
+font-style: italic; font-weight: 600; font-size: 19.8px;
+}
+.nav a { font-size: 14px; }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--accent); }
+  .nav .btn-primary {
+  background: var(--accent); color: var(--text);
+font-weight: 800; font-size: 14px;
+  padding: 8px 14.4px; border-radius: 0;
+  }
+.hero { position: relative; display: flex; height: 300px; }
+  .hero .navy { flex: 1; background: var(--navy); }
+  .hero .rust { flex: 1; background: var(--rust); }
+    .hero .split { width: 6px; background: #0e0e10; }
+.hero-overlay {
+position: absolute; inset: 0;
+display: flex; flex-direction: column;
+padding: 24px 24px 0;
+  }
+  .hero-kicker {
+display: flex; justify-content: space-between;
+font-weight: 700; font-size: 11px; letter-spacing: 3.08px;
+color: var(--muted-72); text-transform: uppercase;
+}
+.hero-title {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center;
+}
+.hero-title .wordmark {
+font-weight: 900; font-size: 46px; letter-spacing: -0.92px;
+text-transform: uppercase;
+}
+    .hero-title .wordmark .amp {
+  font-family: "Playfair Display", Georgia, serif;
+    font-style: italic; font-weight: 600;
+}
+.hero-tagline {
+font-weight: 700; font-size: 13px; letter-spacing: 4.42px;
+color: var(--muted-78); text-transform: uppercase;
+text-align: center; padding-bottom: 20px;
+}
+main { max-width: 820px; margin: 0 auto; padding: 32px 16px 60px; }
+.page-header { padding-bottom: 24px; border-bottom: 2px solid var(--divider); margin-bottom: 24px; }
+.page-kicker { font-size: 13px; color: var(--muted-65); margin-bottom: 8px; }
+.page-kicker .ep-badge {
+display: inline-flex; align-items: center;
+background: var(--navy); color: var(--text);
+font-weight: 800; font-size: 11px; letter-spacing: 0.5px;
+padding: 3px 10px; margin-right: 8px;
+}
+h1 { font-weight: 800; font-size: 42px; letter-spacing: -0.84px; margin: 0; }
+.notice {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+background: #1e2226; border: 1px solid var(--divider);
+padding: 12px 16px; margin-bottom: 24px;
+  }
+.tag {
+display: inline-flex; align-items: center; font-size: 11px; letter-spacing: 0.22px;
+padding: 3px 10px;
+}
+.tag-outline { border: 1px solid var(--accent); color: var(--accent); }
+.notice-text { font-size: 13px; color: var(--muted-70); }
+.intro { font-size: 17px; margin-bottom: 16px; }
+    .intro strong { font-weight: 700; }
+.legend { display: flex; flex-wrap: wrap; gap: 24px; padding: 16px 0 24px; font-size: 12px; color: var(--muted-65); }
+    .legend-item { display: flex; align-items: center; gap: 8px; }
+.legend-item .tag { font-size: 11px; }
+    .tag-confirmed { border: 1px solid var(--text); color: var(--text); }
+    .tag-disputed { border: 1px solid var(--accent); color: var(--accent); }
+.tag-single { background: var(--text); color: var(--bg); }
+section { margin-bottom: 8px; }
+.section-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding-bottom: 12px; margin-bottom: 0;
+border-bottom: 2px solid var(--divider);
+}
+  .section-head h2 { font-weight: 800; font-size: 25px; margin: 0; }
+.section-head .count { font-size: 13px; color: var(--muted-55); }
+.src-row {
+  padding: 16px 12px; border: 1px solid var(--divider); border-top: none;
+}
+.src-row .tag { margin-bottom: 8px; }
+.src-claim { font-size: 15px; margin-bottom: 6px; }
+.src-cite { font-size: 12.5px; color: var(--muted-65); }
+.src-cite a { color: var(--accent); }
+.src-cite a:hover { text-decoration: underline; }
+footer { padding-top: 24px; border-top: 2px solid var(--divider); margin-top: 32px; }
+footer p { margin: 0 0 4px; }
+footer .show-line { font-weight: 800; font-size: 15px; }
+footer .link-line { font-size: 13px; color: var(--muted-55); }
+footer .link-line a { color: var(--accent); }
+</style>
+  </head>
+  <body>
+  <nav class="nav">
+  <span class="nav-brand">PRECISION <span class="amp">&amp;</span> INSTINCT</span>
+  <a href="/precision-and-instinct-notes/episodes/">Episodes</a>
+  <a href="/precision-and-instinct-notes/episodes/16-the-disappearance-of-jimmy-hoffa.html" aria-current="page">Sources</a>
+  <a href="https://precisionandinstinct.taplink.bio">Listen</a>
+  <a class="btn-primary" href="https://precisionandinstinct.taplink.bio">Where to listen →</a>
+</nav>
+<div class="hero">
+<div class="navy"></div>
+<div class="split"></div>
+  <div class="rust"></div>
+  <div class="hero-overlay">
+  <div class="hero-kicker">
+  <span>PRECISION AND INSTINCT</span>
+  <span>SOURCE LIST</span>
+  </div>
+  <div class="hero-title">
+  <div class="wordmark">PRECISION <span class="amp">&amp;</span> INSTINCT</div>
+  </div>
+  <div class="hero-tagline">DEBATE.&nbsp;&nbsp;NO&nbsp;VERDICT.</div>
+  </div>
+  </div>
+  <main>
+  <div class="page-header">
+  <div class="page-kicker"><span class="ep-badge">EPISODE 16</span>SOURCE LIST</div>
+  <h1>The Disappearance of Jimmy Hoffa</h1>
+  </div>
+  <div class="notice">
+  <span class="tag tag-outline">Open Case</span>
+  <span class="notice-text">No one has ever been charged in Hoffa's disappearance, and every person ever publicly named as a participant is now deceased. In July 2026, Hoffa's son and daughter publicly asked FBI Director Kash Patel to release the Bureau's files and name those responsible. This page does not resolve that dispute, and neither did the episode.</span>
+  </div>
+  <p class="intro">
+  This page lists the sources behind the claims made in this episode, tiered by how well-established each one is.
+  <strong>Confirmed</strong> facts come from court records, police reports, or multiple independent contemporaneous news sources.
+  <strong>Disputed</strong> items have conflicting accounts.
+  <strong>Single-source</strong> claims rest on one account with no corroboration — treat them accordingly.
+  </p>
+  <div class="legend">
+  <div class="legend-item"><span class="tag tag-confirmed">Confirmed</span> court &amp; multi-source</div>
+  <div class="legend-item"><span class="tag tag-disputed">Disputed</span> conflicting accounts</div>
+  <div class="legend-item"><span class="tag tag-single">Single source</span> uncorroborated</div>
+  </div>
+  <section>
+  <div class="section-head"><h2>Confirmed Facts</h2><span class="count">10 items</span></div>
+      <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Jimmy Hoffa disappeared on July 30, 1975, after leaving his Lake Orion, Michigan home for an expected meeting at the Machus Red Fox restaurant in Bloomfield Township. He called his wife from the restaurant that afternoon, saying the man he was there to meet hadn't shown, and told her he'd be home by 4 p.m. His car was found unattended in the restaurant parking lot the next morning; he was never seen again.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jimmy_Hoffa" target="_blank" rel="noopener">Wikipedia — Jimmy Hoffa</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">At the time of his disappearance, Hoffa was fighting a Nixon-imposed restriction on returning to Teamsters leadership before 1980, seeking to reclaim the union presidency from incumbent Frank Fitzsimmons, and was in an open feud with New Jersey Teamsters boss and Genovese-family caporegime Anthony "Tony Pro" Provenzano — the man whose associate, Anthony Giacalone, Hoffa was at the restaurant to meet.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jimmy_Hoffa" target="_blank" rel="noopener">Wikipedia — Jimmy Hoffa</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Three weeks after Hoffa vanished, police dogs alerted to his scent in a 1975 Mercury Marquis that Hoffa's foster son, Charles "Chuckie" O'Brien, had borrowed that day; a shotgun and loose ammunition were found in the car.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jimmy_Hoffa" target="_blank" rel="noopener">Wikipedia — Jimmy Hoffa</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In December 1975, a federal investigator testified under oath that three men associated with Provenzano — Salvatore Briguglio, Gabriel Briguglio, and Thomas Andretta — participated in Hoffa's abduction and murder. The testimony relied substantially on the cooperation of mob associate Ralph Picardo. No charges were ever filed against any of the three, and all three denied involvement for the rest of their lives.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jimmy_Hoffa" target="_blank" rel="noopener">Wikipedia — Jimmy Hoffa</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In 1976, the FBI's internal 56-page "Hoffex" memo concluded that organized-crime figures ordered Hoffa's killing over his threat to their control of the Teamsters pension fund, and identified O'Brien as the likely driver of the car with Hoffa in the back seat.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jimmy_Hoffa" target="_blank" rel="noopener">Wikipedia — Jimmy Hoffa</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In 2001, FBI forensic testing matched a hair from Hoffa's own hairbrush to a hair recovered from the back seat of the Mercury — with the Bureau's own caveat that Hoffa could have ridden in the car on a different day.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jimmy_Hoffa" target="_blank" rel="noopener">Wikipedia — Jimmy Hoffa</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Numerous physical searches for Hoffa's remains — a Waterford Township site in 1975, a horse farm in 2006, a Roseville driveway in 2012, an Oakland County property in 2013, and beneath the Pulaski Skyway near a former New Jersey landfill in 2021–2022 — have all concluded without finding remains or, per FBI statements, anything "of evidentiary value."</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jimmy_Hoffa" target="_blank" rel="noopener">Wikipedia — Jimmy Hoffa</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">Hoffa was declared legally dead in 1982. No one has ever been charged in connection with his death, and the case remains officially open.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jimmy_Hoffa" target="_blank" rel="noopener">Wikipedia — Jimmy Hoffa</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In 2004, author Charles Brandt's book "I Heard You Paint Houses" published mob associate Frank Sheeran's deathbed claim that he shot Hoffa inside a Detroit house; the book was adapted into Martin Scorsese's 2019 Netflix film "The Irishman." Independent journalists and legal scholars who reviewed Sheeran's account afterward found that blood evidence at the house he named did not match Hoffa and that no physical evidence corroborates his confession.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/I_Heard_You_Paint_Houses" target="_blank" rel="noopener">Wikipedia — I Heard You Paint Houses</a>; <a href="https://en.wikipedia.org/wiki/The_Irishman_(2019_film)" target="_blank" rel="noopener">Wikipedia — The Irishman</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-confirmed">Confirmed</span>
+      <div class="src-claim">In 2020, Fox Nation's docuseries "Riddle: The Search for James R. Hoffa" revisited a New Jersey landfill lead, and the production's own ground-penetrating radar survey detected what appeared to be barrel-shaped metal at the site. The FBI subsequently conducted a sealed-warrant search there in 2021–2022 and reported finding "nothing of evidentiary value."</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jimmy_Hoffa" target="_blank" rel="noopener">Wikipedia — Jimmy Hoffa</a></div>
+    </div>
+  </section>
+  <section>
+  <div class="section-head"><h2>Disputed / Theories</h2><span class="count">4 items</span></div>
+      <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim">Who ordered or carried out the killing. No consensus exists among a Provenzano-crew abduction (the 1975 sworn testimony, never tested at trial), Frank Sheeran's 2004 deathbed confession (substantially challenged by independent reporting and legal scholarship), Richard Kuklinski's posthumous jailhouse claims (called "a hoax" by a former FBI agent), and mob figure Michael Franzese's on-camera claim to know the shooter's identity without naming him.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jimmy_Hoffa" target="_blank" rel="noopener">Wikipedia — Jimmy Hoffa</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim">Gabriel Briguglio's culpability specifically. Briguglio denied involvement on camera in 2023, calling the 1975 testimony fabricated; former Detroit Organized Crime Strike Force chief Keith Corbett and longtime crime reporter Scott Burnstein have each separately said publicly they don't believe he was involved, against the original sworn testimony naming him. Briguglio died in November 2025, still neither charged nor cleared.</div>
+      <div class="src-cite">Source: 2023 Fox News/Fox Nation interview; reporting by journalist Dan Moldea on Briguglio's November 2025 death (link verification pending — see Flagged for Review)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim">Chuckie O'Brien's role. One theory holds O'Brien was an unwitting driver used to lure Hoffa into the car; others, including former prosecutor Keith Corbett, have argued O'Brien was considered too unreliable by organized crime to be trusted with the killing itself. O'Brien died in 2020 still denying involvement.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jimmy_Hoffa" target="_blank" rel="noopener">Wikipedia — Jimmy Hoffa</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-disputed">Disputed</span>
+      <div class="src-claim">Where Hoffa's remains ended up. Theories include the New Jersey landfill site searched by the FBI in 2021–2022, a Michigan horse farm, a shallow grave in Oakland County, cremation at a Detroit-area facility, and a persistent urban legend that he was buried beneath the end zone of the old Giants Stadium — a claim tested and unsupported by MythBusters, and again checked and unsupported at the stadium's 2010 demolition. None of these has ever been confirmed.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jimmy_Hoffa" target="_blank" rel="noopener">Wikipedia — Jimmy Hoffa</a></div>
+    </div>
+  </section>
+  <section>
+  <div class="section-head"><h2>Single-Source Claims</h2><span class="count">5 items</span></div>
+      <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Frank Sheeran's entire confession, as relayed in "I Heard You Paint Houses" — no independent corroboration exists, and blood evidence at the house he named does not match Hoffa.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/I_Heard_You_Paint_Houses" target="_blank" rel="noopener">Wikipedia — I Heard You Paint Houses</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Richard Kuklinski's posthumously published jailhouse claims of participating in a four-man hit team — called a hoax by a former FBI agent.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jimmy_Hoffa" target="_blank" rel="noopener">Wikipedia — Jimmy Hoffa</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Michael Franzese's on-camera claims to know the shooter's identity and the body's location — no name and no location precision was ever given.</div>
+      <div class="src-cite">Source: recorded interviews, 2018–2019 (link verification pending — see Flagged for Review)</div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Reputed mobster Tony Zerilli's 2013 claim that Hoffa was buried in a shallow grave later possibly relocated — a single informant's account never confirmed by the related FBI dig.</div>
+      <div class="src-cite">Source: <a href="https://en.wikipedia.org/wiki/Jimmy_Hoffa" target="_blank" rel="noopener">Wikipedia — Jimmy Hoffa</a></div>
+    </div>
+    <div class="src-row">
+      <span class="tag tag-single">Single source</span>
+      <div class="src-claim">Fox Nation's 2020 ground-penetrating radar detection of "barrel-shaped" metal at the New Jersey landfill site — one production team's equipment read, not a forensic or law-enforcement finding, and not confirmed as human remains by the FBI's follow-up search.</div>
+      <div class="src-cite">Source: Fox Nation, "Riddle: The Search for James R. Hoffa" (2020) (link verification pending — see Flagged for Review)</div>
+    </div>
+  </section>
+  <footer>
+  <p class="show-line">Precision &amp; Instinct with Simone Valdez and Eli Marchetti</p>
+  <p class="link-line"><a href="https://precisionandinstinct.taplink.bio">precisionandinstinct.taplink.bio</a> · Full episode list and where to listen</p>
+</footer>
+</main>
+</body>
+  </html>
