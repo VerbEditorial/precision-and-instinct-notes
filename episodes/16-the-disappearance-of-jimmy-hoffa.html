@@ -8,9 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;0,800;0,900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
   <style>
   :root {
-  --bg: #14171a;
+  --bg: #0E0E10;
 --text: #f2efe9;
-  --accent: #ec3013;
+  --accent: #B8522C;
+  --accent-hi: #c9622f;
   --navy: #1B2A3C;
 --rust: #B8522C;
   --divider: rgba(242,239,233,0.24);
@@ -30,7 +31,7 @@ font-size: 15px;
 line-height: 1.55;
 }
 a { color: inherit; text-decoration: none; }
-.nav {
+.nav { flex-wrap: wrap;
   display: flex; align-items: center; gap: 24px;
 padding: 12px 16px;
 border-bottom: 2px solid var(--divider);
@@ -134,12 +135,16 @@ footer .link-line a { color: var(--accent); }
 </style>
   </head>
   <body>
+<script>
+(function(){var d=new Date(),t=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+if("2026-10-25">t)location.replace("./");})();
+</script>
   <nav class="nav">
-  <span class="nav-brand">PRECISION <span class="amp">&amp;</span> INSTINCT</span>
-  <a href="/precision-and-instinct-notes/episodes/">Episodes</a>
-  <a href="/precision-and-instinct-notes/episodes/16-the-disappearance-of-jimmy-hoffa.html" aria-current="page">Sources</a>
+  <a class="nav-brand" href="https://precisionandinstinct.com/">PRECISION <span class="amp">&amp;</span> INSTINCT</a>
+  <a href="https://precisionandinstinct.com/">Home</a>
+  <a href="./">Episodes</a>
   <a href="https://precisionandinstinct.taplink.bio">Listen</a>
-  <a class="btn-primary" href="https://precisionandinstinct.taplink.bio">Where to listen →</a>
+  <a class="btn-primary" href="https://precisionandinstinct.taplink.bio">Where to listen &rarr;</a>
 </nav>
 <div class="hero">
 <div class="navy"></div>
